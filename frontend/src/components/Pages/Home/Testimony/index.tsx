@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../../interfaces/styled';
+import CardTestimony from './CardTestimony';
 
 const Testimony: React.FC<IPropsStyled> = ({ className }) => {
 	return (
@@ -7,6 +8,9 @@ const Testimony: React.FC<IPropsStyled> = ({ className }) => {
 			<section className={className}>
 				<div className={`container`}>
 					<h2>Depoimento de Nossos Alunos</h2>
+					<div className="container flex">
+						<CardTestimony />
+					</div>
 				</div>
 			</section>
 		</>
@@ -15,7 +19,7 @@ const Testimony: React.FC<IPropsStyled> = ({ className }) => {
 
 export default styled(Testimony)`
 	& .container {
-		padding: 80px 0;
+		padding: 80px 16px;
 
 		h2 {
 			font-size: 36px;
@@ -24,6 +28,12 @@ export default styled(Testimony)`
 			text-align: center;
 			color: var(--color-primary);
 			padding-bottom: 80px;
+		}
+		.container.flex {
+			padding: 0;
+			flex-wrap: wrap;
+			gap: 24px;
+			justify-content: space-around;
 		}
 	}
 `;
