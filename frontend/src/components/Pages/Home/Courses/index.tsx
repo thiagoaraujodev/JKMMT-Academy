@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../../interfaces/styled';
+import CardSkill from './CardSkill';
 
 const Courses: React.FC<IPropsStyled> = ({ className }) => {
 	return (
@@ -13,6 +14,8 @@ const Courses: React.FC<IPropsStyled> = ({ className }) => {
 						abaixo você pode verificar que estamos disponibilizando cursos voltados a tecnologia que o mercado precisa.
 						Faça sua conta e verifique o que você pode aprender ainda hoje.
 					</p>
+
+					<CardSkill />
 				</div>
 			</section>
 		</>
@@ -40,10 +43,5 @@ export default styled(Courses)`
 			line-height: 30px;
 			text-align: center;
 		}
-
-		/* @media (max-width: 992px) {
-			flex-wrap: wrap;
-			justify-content: center;
-		} */
 	}
 `;

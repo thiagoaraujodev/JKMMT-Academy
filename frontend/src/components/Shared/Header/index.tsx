@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../interfaces/styled';
 
-import logo from '../../../assets/Images/logo.png';
+import logo from '../../../assets/images/logo.png';
 import NavBar from './NavBar';
 
 const Header: React.FC<IPropsStyled> = ({ className }) => {
@@ -43,8 +43,6 @@ export default styled(Header)`
 
 	nav {
 		width: 100%;
-		max-width: 1310px;
-
 		display: flex;
 		align-self: center;
 		align-items: center;

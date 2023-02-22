@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { IPropsStyled } from '../../../../interfaces/styled';
 
 import { Link } from 'react-router-dom';
-import description from '../../../../assets/Images/description.png';
+import description from '../../../../assets/images/description.png';
 
 const Description: React.FC<IPropsStyled> = ({ className }) => {
 	return (
@@ -33,7 +33,7 @@ export default styled(Description)`
 	background-color: var(--color-primary);
 
 	& .container {
-		padding: 120px 0;
+		padding: 120px 16px;
 		display: flex;
 		gap: 16px;
 

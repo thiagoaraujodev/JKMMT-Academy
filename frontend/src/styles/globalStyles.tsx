@@ -57,7 +57,7 @@ iframe {
 	.container-md,
 	.container-sm,
 	.container {
-		max-width: 1280px;
+		max-width: 1312px;
 	}
 }
 
