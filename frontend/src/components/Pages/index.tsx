@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import GlobalStyle from '../../styles/globalStyles';
+import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
 import Home from './Home';
 
@@ -16,16 +17,17 @@ const Pages = memo(() => {
 						element={
 							<>
 								<Header />
-								<main>
-									<h1
-										style={{
-											margin: '100px 0 20px 16px',
-										}}
-									>
-										Página não encontrada
-									</h1>
+								<main
+									style={{
+										height: '90vh',
+										display: 'flex',
+										alignItems: 'center',
+										justifyContent: 'center',
+									}}
+								>
+									<h1>Página não encontrada</h1>
 								</main>
-								{/* <Footer /> */}
+								<Footer />
 							</>
 						}
 					/>

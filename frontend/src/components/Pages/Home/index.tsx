@@ -4,6 +4,7 @@ import Footer from '../../Shared/Footer';
 import Header from '../../Shared/Header';
 import Courses from './Courses';
 import Description from './Description';
+import Questions from './Questions';
 import Testimony from './Testimony';
 
 const Home: React.FC<IPropsStyled> = ({ className }) => {
@@ -19,11 +20,7 @@ const Home: React.FC<IPropsStyled> = ({ className }) => {
 
 				<div className="divider"></div>
 
-				<section id="questions">
-					<div className={`container`}>
-						<h2>Saiba Mais</h2>
-					</div>
-				</section>
+				<Questions />
 
 				<div className="divider"></div>
 			</main>

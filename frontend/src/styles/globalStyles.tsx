@@ -101,7 +101,6 @@ body {
 	font-weight: 600;
 	text-align: center;
 	color: var(--bg-color-primary) !important;
-	/* background-color: var(--color-primary); */
 	border-radius: 4px;
 	box-shadow: 0 1px 0 var(--color-primary);
 }
@@ -120,6 +119,11 @@ body {
 }
 .bt-green {
 	background-color: var(--color-green);
+}
+
+.bt-primary-outlined{
+	color: var(--color-primary)!important;
+	border: 1px solid var(--color-primary);
 }
 
 .uppercase{
