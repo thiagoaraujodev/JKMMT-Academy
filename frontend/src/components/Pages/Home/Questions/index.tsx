@@ -22,7 +22,7 @@ const Questions: React.FC<IPropsStyled> = ({ className }) => {
 									Criar Conta
 								</Link>
 
-								<Link className="bt bt-primary-outlined" to="/">
+								<Link className="bt bt-primary-outlined" to="/login">
 									Já tenho Conta
 								</Link>
 							</div>

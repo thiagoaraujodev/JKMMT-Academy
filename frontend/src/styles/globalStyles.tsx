@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
+<style>
+	@import
+	url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Open+Sans:wght@400;600;700;800&display=swap');
+</style>;
+
 const GlobalStyle = createGlobalStyle`
   * {
 	margin: 0;
@@ -63,9 +68,12 @@ iframe {
 
 /*==== VARIABLES ============================ */
 :root {
+	--bg-color-primary: #fbfcff;
 	--color-primary: #7A43ED;
 	--color-green: #4CAF50;
-	--bg-color-primary: #fbfcff;
+	--color-gray-light:#67808c;
+	--color-gray: #B0BEC5;
+	--color-gray-lighter: #B2BCC0;
 }
 
 /*===  BASE ============================ */

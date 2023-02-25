@@ -15,7 +15,7 @@ const NavBar: React.FC<IPropsStyled> = ({ className }) => {
 
 			<div className={`${className} ${openMenu ? '' : openMenu}`}>
 				<div className="menu">
-					<Link className="bt bt-primary" to="/">
+					<Link className="bt bt-primary" to="/login">
 						Entrar
 					</Link>
 

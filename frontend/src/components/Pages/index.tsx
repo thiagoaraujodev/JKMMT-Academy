@@ -4,6 +4,7 @@ import GlobalStyle from '../../styles/globalStyles';
 import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
 import Home from './Home';
+import Login from './Login';
 
 const Pages = memo(() => {
 	return (
@@ -12,6 +13,7 @@ const Pages = memo(() => {
 				<GlobalStyle />
 				<Routes>
 					<Route path="/" element={<Home />} />
+					<Route path="/login" element={<Login />} />
 					<Route
 						path="/404"
 						element={
