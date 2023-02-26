@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../interfaces/styled';
-import Footer from '../../Shared/Footer';
-import Header from '../../Shared/Header';
+import Footer from '../../shared/Footer';
+import Header from '../../shared/Header';
 import Courses from './Courses';
 import Description from './Description';
 import Questions from './Questions';

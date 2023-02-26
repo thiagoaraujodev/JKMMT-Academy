@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../../interfaces/styled';
-
 import ButtonBurger from './ButtonBurger';
 
 const NavBar: React.FC<IPropsStyled> = ({ className }) => {
@@ -19,7 +17,7 @@ const NavBar: React.FC<IPropsStyled> = ({ className }) => {
 						Entrar
 					</Link>
 
-					<Link className="bt bt-primary" to="/">
+					<Link className="bt bt-primary" to="/registro">
 						Criar Conta
 					</Link>
 				</div>

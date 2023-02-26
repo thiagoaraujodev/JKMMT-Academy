@@ -86,6 +86,9 @@ $ git clone https://github.com/thiagoaraujodev/JKMMT-Academy.git
 # Acesse a pasta do projeto
 $ cd JKMMT-Academy/frontend
 
+# Execute o comando para instalar as dependências
+$ npm install
+
 # Execute o comando para rodar a aplicação
 $ npm run dev
 ```

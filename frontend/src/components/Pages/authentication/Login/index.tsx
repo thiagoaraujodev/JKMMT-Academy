@@ -1,24 +1,18 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import LoginImage from '../../../assets/images/login.png';
-import logo from '../../../assets/images/logo.png';
-import { IPropsStyled } from '../../../interfaces/styled';
+import { IPropsStyled } from '../../../../interfaces/styled';
+import BackgroundImage from '../shared/BackgroundImage';
+import HeaderAuthentication from '../shared/HeaderAuthentication';
 
 const Login: React.FC<IPropsStyled> = ({ className }) => {
 	return (
 		<>
 			<div className={className}>
-				<div className="backgroundImage">
-					<img src={LoginImage} alt="" />
-					<h2>JKMMT ACADEMY</h2>
-					<p>Aprimore seus conhecimentos com a maior plataforma de conteúdos.</p>
-				</div>
+				<BackgroundImage />
+
 				<div className="form">
-					<header>
-						<div className="container">
-							<img src={logo} className="logo" alt="Logo JKMT Academy" />
-						</div>
-					</header>
+					<HeaderAuthentication />
+
 					<main>
 						<h1>Entrar</h1>
 						<p>Preencha seus dados para entrar</p>
@@ -61,7 +55,7 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 							Ainda não tem uma conta?
 						</p>
 
-						<Link className="create-account" to="/">
+						<Link className="create-account" to="/registro">
 							Criar Conta
 						</Link>
 					</main>
@@ -75,63 +69,12 @@ export default styled(Login)`
 	width: 100%;
 	display: flex;
 
-	.backgroundImage {
-		width: min(70%, 960px);
-		height: 100vh;
-		padding: 125px 40px 40px 40px;
-		background: linear-gradient(359deg, #282760 25%, rgba(31, 30, 90, 0.35) 80%);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		h2 {
-			padding-top: 32px;
-			font-family: 'Coda Caption', sans-serif;
-			font-style: normal;
-			font-weight: 800;
-			font-size: 26px;
-			line-height: 46px;
-			color: #ffffff;
-		}
-		p {
-			padding-top: 16px;
-			width: 100%;
-			max-width: 335px;
-			height: 100%;
-			max-height: 35vh;
-			font-family: 'Open Sans', sans-serif;
-			font-size: 18px;
-			line-height: 26px;
-			text-align: center;
-			color: var(--color-gray-lighter);
-		}
-
-		@media (max-width: 991px) {
-			display: none;
-		}
-	}
-
 	.form {
 		width: 100%;
 		padding: 32px;
 
-		header {
-			width: 100%;
-			padding-top: 32px;
-
-			.container {
-				width: 100%;
-
-				img {
-					max-width: 110px;
-				}
-			}
-		}
-
 		main {
 			max-width: 350px;
-			padding-top: 100px;
 			margin-left: auto;
 			margin-right: auto;
 

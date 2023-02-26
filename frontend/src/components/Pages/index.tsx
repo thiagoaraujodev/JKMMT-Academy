@@ -1,10 +1,11 @@
 import { memo } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import GlobalStyle from '../../styles/globalStyles';
-import Footer from '../Shared/Footer';
-import Header from '../Shared/Header';
+import Footer from '../shared/Footer';
+import Header from '../shared/Header';
+import CreateAccount from './authentication/CreateAccount';
+import Login from './authentication/Login';
 import Home from './Home';
-import Login from './Login';
 
 const Pages = memo(() => {
 	return (
@@ -14,6 +15,7 @@ const Pages = memo(() => {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/login" element={<Login />} />
+					<Route path="/registro" element={<CreateAccount />} />
 					<Route
 						path="/404"
 						element={

@@ -72,6 +72,7 @@ export default styled(QuestionsAndAnswers)`
 	padding-top: 16px;
 	padding-bottom: 16px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+	cursor: pointer;
 
 	:first-of-type {
 		padding-top: 0;

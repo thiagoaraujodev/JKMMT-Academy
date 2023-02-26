@@ -18,7 +18,7 @@ const Questions: React.FC<IPropsStyled> = ({ className }) => {
 								<Phone color="white" size={15} fill="white" /> Fale Conosco Aqui
 							</Link>
 							<div className="flex">
-								<Link className="bt bt-primary-outlined" to="/">
+								<Link className="bt bt-primary-outlined" to="/registro">
 									Criar Conta
 								</Link>
 
