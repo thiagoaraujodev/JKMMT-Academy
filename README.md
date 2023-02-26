@@ -26,30 +26,42 @@ O **JKMMT Academy** é um projeto desenvolvido para a 2º entrega do Projeto Int
 
 ## 🚀 Telas da Aplicação
 
-Você também pode visualizar o modelo desta aplicação no figma. [Clique aqui](https://www.figma.com/file/icF9NZr1K9UOGquzd8t7D6/PI-Senac---4-Periodo?node-id=14%3A2&t=RRHTxR5X7RXZPhsH-1) :)!!!
+Você também pode visualizar o modelo desta aplicação no figma. [Clique aqui](https://www.figma.com/file/icF9NZr1K9UOGquzd8t7D6/PI-Senac---4-Periodo?node-id=14%3A2&t=RRHTxR5X7RXZPhsH-1) 😃!!!
 
 
 ## 💻 Home
+
+<br>
 
 ![Home](.github/home.png "Home - JKMMT Academy")
 
 ## 💻 Login
 
+<br>
+
 ![Login](.github/login.png "Login - JKMMT Academy")
 
 ## 💻 Abra Sua Conta
+
+<br>
 
 ![Abra Sua Conta](.github/account.png "Abra Sua Conta - JKMMT Academy")
 
 ## 💻 Esqueci Minha Senha
 
+<br>
+
 ![Esqueci Minha Senha](.github/password.png "Esqueci Minha Senha - JKMMT Academy")
 
 ## 💻 Cursos
 
+<br>
+
 ![Cursos](.github/courses.png "Cursos - JKMMT Academy")
 
 ## 💻 Iniciar Curso
+
+<br>
 
 ![Iniciar Curso](.github/start_courses.png "Iniciar Curso - JKMMT Academy")
 
