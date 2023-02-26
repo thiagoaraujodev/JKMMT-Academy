@@ -4,6 +4,7 @@ import GlobalStyle from '../../styles/globalStyles';
 import Footer from '../shared/Footer';
 import Header from '../shared/Header';
 import CreateAccount from './authentication/CreateAccount';
+import ForgotPassword from './authentication/ForgotPassword';
 import Login from './authentication/Login';
 import Home from './Home';
 
@@ -16,6 +17,7 @@ const Pages = memo(() => {
 					<Route path="/" element={<Home />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/registro" element={<CreateAccount />} />
+					<Route path="/nova-senha" element={<ForgotPassword />} />
 					<Route
 						path="/404"
 						element={

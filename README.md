@@ -6,15 +6,15 @@
 
 <br>
 
-## 📰 Organização do Projeto
+## 📰 Projeto
 
-O **JKMMT Academy** é um projeto desenvolvido para a 2º entrega do Projeto Integrador. O desafio neste semestre é fazer com que a ideia desenvolvida pelo grupo na 1º entrega possa ser viabilizada através de um aplicativo baseado nas premissas de desenvolvimento web.
+O **JKMMT Academy** é uma aplicação desenvolvida para a **2ª entrega do Projeto Integrador**. O desafio neste semestre é fazer com que a ideia desenvolvida pelo grupo na 1ª entrega possa ser viabilizada através de um aplicativo baseado nas premissas de desenvolvimento web.
 
 ## Grupo 08
 
 🧑💻  [Josias Martins Caitano](https://github.com/josiasmartins)
 
-🧑💻  [Kleiton Tavares Melo](https://github.com/)
+🧑💻  [Kleiton Tavares Melo](https://github.com/KleitonTavares)
 
 👧💻  [Mariah Guedes Hermínio de Lima](https://github.com/)
 
@@ -75,7 +75,8 @@ Para inicializar é muito simples:
 1. Faça um clone do repositorio como no exemplo.
 2. Em seguida abra sua IDE de preferência.
 3. Acesse a pasta do projeto.
-4. Execute a aplicação.
+4. Instale as dependências.
+5. Execute a aplicação.
 
 ```ps
 Exemplo:

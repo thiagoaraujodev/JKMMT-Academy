@@ -4,7 +4,7 @@ import { IPropsStyled } from '../../../../interfaces/styled';
 import BackgroundImage from '../shared/BackgroundImage';
 import HeaderAuthentication from '../shared/HeaderAuthentication';
 
-const Login: React.FC<IPropsStyled> = ({ className }) => {
+const NewPassword: React.FC<IPropsStyled> = ({ className }) => {
 	return (
 		<>
 			<div className={className}>
@@ -14,8 +14,8 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 					<HeaderAuthentication />
 
 					<main>
-						<h1>Entrar</h1>
-						<p>Preencha seus dados para entrar</p>
+						<h1>Esqueci minha senha</h1>
+						<p>Insira seu e-mail cadastrado para recuperar sua senha</p>
 
 						<div className="label-float">
 							<input
@@ -28,23 +28,8 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 							<label>E-mail</label>
 						</div>
 
-						<div className="label-float">
-							<input
-								type="password"
-								placeholder="password"
-								// value={password}
-								// onChange={handlePasswordInput}
-								required
-							/>
-							<label>Senha</label>
-						</div>
-
-						<Link className="forgot-password" to="/nova-senha">
-							Esqueci minha senha
-						</Link>
-
 						<button className="bt bt-primary" type="button">
-							Entrar
+							Confirmar E-mail
 						</button>
 
 						<p
@@ -52,11 +37,11 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 								padding: 0,
 							}}
 						>
-							Ainda não tem uma conta?
+							Já possui uma conta?
 						</p>
 
-						<Link className="create-account" to="/registro">
-							Criar Conta
+						<Link className="login" to="/login">
+							Clique Aqui
 						</Link>
 					</main>
 				</div>
@@ -65,7 +50,7 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 	);
 };
 
-export default styled(Login)`
+export default styled(NewPassword)`
 	width: 100%;
 	display: flex;
 
@@ -137,7 +122,7 @@ export default styled(Login)`
 				cursor: pointer;
 			}
 
-			.create-account {
+			.login {
 				color: var(--color-primary) !important;
 			}
 		}
