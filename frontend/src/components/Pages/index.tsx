@@ -7,6 +7,7 @@ import CreateAccount from './authentication/CreateAccount';
 import ForgotPassword from './authentication/ForgotPassword';
 import Login from './authentication/Login';
 import Home from './Home';
+import Dashboard from './private/Dashboard';
 
 const Pages = memo(() => {
 	return (
@@ -18,6 +19,7 @@ const Pages = memo(() => {
 					<Route path="/login" element={<Login />} />
 					<Route path="/registro" element={<CreateAccount />} />
 					<Route path="/nova-senha" element={<ForgotPassword />} />
+					<Route path="/dashboard" element={<Dashboard />} />
 					<Route
 						path="/404"
 						element={

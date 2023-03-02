@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 <style>
 	@import
-	url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Open+Sans:wght@400;600;700;800&display=swap');
+	url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Montserrat:wght@800&family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap');
 </style>;
 
 const GlobalStyle = createGlobalStyle`
