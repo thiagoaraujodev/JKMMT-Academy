@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { IPropsStyled } from '../../../interfaces/styled';
 
 const Footer: React.FC<IPropsStyled> = ({ className }) => {
-	return <footer className={`${className} container`}>Copyright ® 2022</footer>;
+	return <footer className={className}>Copyright ® 2022</footer>;
 };
 
 export default styled(Footer)`
@@ -12,4 +12,5 @@ export default styled(Footer)`
 	height: 80px;
 	align-items: center;
 	justify-content: center;
+	border-top: 1px solid var(--color-gray-lighter);
 `;

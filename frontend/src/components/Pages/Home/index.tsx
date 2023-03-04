@@ -15,14 +15,9 @@ const Home: React.FC<IPropsStyled> = ({ className }) => {
 				<Description />
 				<Courses />
 				<div className="divider"></div>
-
 				<Testimony />
-
 				<div className="divider"></div>
-
 				<Questions />
-
-				<div className="divider"></div>
 			</main>
 			<Footer />
 		</>

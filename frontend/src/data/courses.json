@@ -3,43 +3,43 @@
 		"title": "Design Gráfico com Canva",
 		"sub_title": "Marketing",
 		"image": "src/assets/Images/cards/canva.png",
-		"link": ""
+		"link": "/curso/design-grafico-com-canva"
 	},
 	{
 		"title": "Spring Boot 2 ",
 		"sub_title": "Back - End",
 		"image": "src/assets/Images/cards/spring-boot-2.png",
-		"link": ""
+		"link": "/curso/spring-boot-2"
 	},
 	{
-		"title": "HTML5 na prática ",
+		"title": "HTML5 na prática",
 		"sub_title": "Front - End",
 		"image": "src/assets/Images/cards/html-5-na-pratica.png",
-		"link": ""
+		"link": "/curso/html5-na-pratica"
 	},
 	{
-		"title": "ASP.NET Core 5 - Criando API ",
+		"title": "ASP.NET Core 5 - Criando API",
 		"sub_title": "Back - End",
 		"image": "src/assets/Images/cards/asp-net-core-5.png",
-		"link": ""
+		"link": "/curso/asp-net-core-5-criando-api"
 	},
 	{ "title": "Angular.js", "sub_title": "Front - End", "image": "src/assets/Images/cards/angular.png", "link": "" },
 	{
-		"title": "MySQL para Iniciantes ",
+		"title": "MySQL para Iniciantes",
 		"sub_title": "Banco de Dados",
 		"image": "src/assets/Images/cards/msql.png",
-		"link": ""
+		"link": "/curso/mysql-para-iniciantes"
 	},
 	{
-		"title": "TypeScript do Básico ",
+		"title": "TypeScript do Básico",
 		"sub_title": "Front - End",
 		"image": "src/assets/Images/cards/typescript.png",
-		"link": ""
+		"link": "/curso/typescript-do-basico"
 	},
 	{
-		"title": "Java 8 para Iniciantes ",
+		"title": "Java 8 para Iniciantes",
 		"sub_title": "Back - End",
 		"image": "src/assets/Images/cards/java-8.png",
-		"link": ""
+		"link": "/curso/java-8-para-iniciantes"
 	}
 ]

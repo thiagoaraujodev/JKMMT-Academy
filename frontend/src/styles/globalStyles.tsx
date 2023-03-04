@@ -74,6 +74,8 @@ iframe {
 	--color-gray-light:#67808c;
 	--color-gray: #B0BEC5;
 	--color-gray-lighter: #B2BCC0;
+	--text-color-black-gray: #37474F;
+	--text-color-black-gray-light: #546E7A;
 }
 
 /*===  BASE ============================ */
@@ -96,7 +98,7 @@ body {
 }
 
 .divider {
-	border: 1px solid rgba(0, 0, 0, 0.16);
+	border-top: 1px solid var(--color-gray-lighter);
 }
 
 .flex{
@@ -104,6 +106,7 @@ body {
 }
 
 .bt {
+	height: fit-content;
 	padding: 8px 16px;
 	font-size: 15px;
 	font-weight: 600;
