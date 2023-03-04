@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../../interfaces/styled';
-import BackgroundImage from '../shared/BackgroundImage';
-import HeaderAuthentication from '../shared/HeaderAuthentication';
+import BackgroundImage from '../../../shared/BackgroundImage';
+import HeaderAuthentication from '../../../shared/Header/HeaderAuthentication';
 
 const NewPassword: React.FC<IPropsStyled> = ({ className }) => {
 	return (

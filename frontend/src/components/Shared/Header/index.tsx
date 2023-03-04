@@ -1,27 +1,14 @@
-import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../interfaces/styled';
+import Logo from './Logo';
 
-import logo from '../../../assets/images/logo.png';
 import NavBar from './NavBar';
 
 const Header: React.FC<IPropsStyled> = ({ className }) => {
 	return (
 		<header className={className}>
 			<nav className="container">
-				<Link
-					to="/"
-					title="JKMT Academy"
-					onClick={() =>
-						window.scroll({
-							top: 0,
-							behavior: 'smooth',
-						})
-					}
-				>
-					<img src={logo} className="logo" alt="Logo JKMT Academy" />
-				</Link>
+				<Logo />
 				<NavBar />
 			</nav>
 		</header>

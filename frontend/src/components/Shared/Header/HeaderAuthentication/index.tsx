@@ -1,24 +1,12 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../../../../assets/images/logo.png';
 import { IPropsStyled } from '../../../../interfaces/styled';
+import Logo from '../Logo';
 
 const HeaderAuthentication: React.FC<IPropsStyled> = ({ className }) => {
 	return (
 		<header className={className}>
 			<div className="container">
-				<Link
-					to="/"
-					title="JKMT Academy"
-					onClick={() =>
-						window.scroll({
-							top: 0,
-							behavior: 'smooth',
-						})
-					}
-				>
-					<img src={logo} className="logo" alt="Logo JKMT Academy" />
-				</Link>
+				<Logo />
 			</div>
 		</header>
 	);

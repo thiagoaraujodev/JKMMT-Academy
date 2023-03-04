@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import LoginImage from '../../../../assets/images/login.png';
-import { IPropsStyled } from '../../../../interfaces/styled';
+import LoginImage from '../../../assets/Images/login.png';
+import { IPropsStyled } from '../../../interfaces/styled';
 
 const BackgroundImage: React.FC<IPropsStyled> = ({ className }) => {
 	return (
