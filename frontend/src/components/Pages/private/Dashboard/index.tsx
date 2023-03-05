@@ -4,12 +4,12 @@ import courses from '../../../../data/courses.json';
 import { IPropsStyled } from '../../../../interfaces/styled';
 import CardCourse from '../../../shared/CardCourse';
 import Footer from '../../../shared/Footer';
-import Header from '../../../shared/Header';
+import HeaderPrivate from '../../../shared/Header/HeaderPrivate';
 
 const Dashboard: React.FC<IPropsStyled> = ({ className }) => {
 	return (
 		<>
-			<Header />
+			<HeaderPrivate />
 			<main className={className}>
 				<div className="container flex">
 					<div className="description">

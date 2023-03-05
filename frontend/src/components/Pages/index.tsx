@@ -1,8 +1,10 @@
 import { memo } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from '../../context/AuthProvider';
 import GlobalStyle from '../../styles/globalStyles';
 import Footer from '../shared/Footer';
 import Header from '../shared/Header';
+import { ProtectedLayout } from '../shared/ProtectedLayout';
 import CreateAccount from './authentication/CreateAccount';
 import ForgotPassword from './authentication/ForgotPassword';
 import Login from './authentication/Login';
@@ -11,7 +13,7 @@ import Dashboard from './private/Dashboard';
 
 const Pages = memo(() => {
 	return (
-		<>
+		<AuthProvider>
 			<BrowserRouter>
 				<GlobalStyle />
 				<Routes>
@@ -19,7 +21,14 @@ const Pages = memo(() => {
 					<Route path="/login" element={<Login />} />
 					<Route path="/registro" element={<CreateAccount />} />
 					<Route path="/nova-senha" element={<ForgotPassword />} />
-					<Route path="/dashboard" element={<Dashboard />} />
+					<Route
+						path="/dashboard"
+						element={
+							<ProtectedLayout>
+								<Dashboard />
+							</ProtectedLayout>
+						}
+					></Route>
 					<Route
 						path="/404"
 						element={
@@ -42,7 +51,7 @@ const Pages = memo(() => {
 					<Route path="*" element={<Navigate replace to="/404" />} />
 				</Routes>
 			</BrowserRouter>
-		</>
+		</AuthProvider>
 	);
 });
 

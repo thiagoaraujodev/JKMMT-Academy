@@ -1,10 +1,35 @@
-import { Link } from 'react-router-dom';
+import { ChangeEvent, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useAuth } from '../../../../context/AuthProvider/useAuth';
 import { IPropsStyled } from '../../../../interfaces/styled';
 import BackgroundImage from '../../../shared/BackgroundImage';
 import HeaderAuthentication from '../../../shared/Header/HeaderAuthentication';
 
 const Login: React.FC<IPropsStyled> = ({ className }) => {
+	const auth = useAuth();
+	const navigate = useNavigate();
+
+	const [email, setEmail] = useState('eve.holt@reqres.in');
+	const [password, setPassword] = useState('');
+	const [errorMessage, setErrorMessage] = useState('');
+
+	const handleEmailInput = (event: ChangeEvent<HTMLInputElement>) => {
+		setEmail(event.target.value);
+	};
+	const handlePasswordInput = (event: ChangeEvent<HTMLInputElement>) => {
+		setPassword(event.target.value);
+	};
+
+	const onFinish = async () => {
+		try {
+			await auth.authenticate(email, password);
+			navigate('/dashboard');
+		} catch (error) {
+			setErrorMessage('Email ou Senha inválidos!!');
+		}
+	};
+
 	return (
 		<>
 			<div className={className}>
@@ -18,24 +43,12 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 						<p>Preencha seus dados para entrar</p>
 
 						<div className="label-float">
-							<input
-								type="email"
-								placeholder="Email"
-								// value={email}
-								// onChange={handleEmailInput}
-								required
-							/>
+							<input type="email" placeholder="Email" value={email} onChange={handleEmailInput} required />
 							<label>E-mail</label>
 						</div>
 
 						<div className="label-float">
-							<input
-								type="password"
-								placeholder="password"
-								// value={password}
-								// onChange={handlePasswordInput}
-								required
-							/>
+							<input type="password" placeholder="password" value={password} onChange={handlePasswordInput} required />
 							<label>Senha</label>
 						</div>
 
@@ -43,7 +56,9 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 							Esqueci minha senha
 						</Link>
 
-						<button className="bt bt-primary" type="button">
+						{errorMessage && <div className="error"> {errorMessage} </div>}
+
+						<button className="bt bt-primary" type="button" onClick={() => onFinish()}>
 							Entrar
 						</button>
 
@@ -124,9 +139,17 @@ export default styled(Login)`
 			}
 
 			.forgot-password {
+				display: flex;
+				justify-content: flex-end;
+				font-size: 14px;
 				color: var(--color-primary) !important;
-				float: right;
-				padding: 8px 0;
+			}
+
+			.error {
+				padding-top: 16px;
+				display: flex;
+				justify-content: center;
+				color: #ff0000;
 			}
 
 			button {
