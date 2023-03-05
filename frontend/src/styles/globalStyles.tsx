@@ -108,8 +108,10 @@ body {
 .bt {
 	height: fit-content;
 	padding: 8px 16px;
+	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 400;
+	line-height: 18px;
 	text-align: center;
 	color: var(--bg-color-primary) !important;
 	border-radius: 4px;

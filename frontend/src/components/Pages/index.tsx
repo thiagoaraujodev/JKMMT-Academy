@@ -10,6 +10,7 @@ import ForgotPassword from './authentication/ForgotPassword';
 import Login from './authentication/Login';
 import Home from './Home';
 import Dashboard from './private/Dashboard';
+import MyCourses from './private/MyCourses';
 
 const Pages = memo(() => {
 	return (
@@ -26,6 +27,14 @@ const Pages = memo(() => {
 						element={
 							<ProtectedLayout>
 								<Dashboard />
+							</ProtectedLayout>
+						}
+					></Route>
+					<Route
+						path="/meus-cursos"
+						element={
+							<ProtectedLayout>
+								<MyCourses />
 							</ProtectedLayout>
 						}
 					></Route>
