@@ -11,6 +11,7 @@ import Login from './authentication/Login';
 import Home from './Home';
 import Dashboard from './private/Dashboard';
 import MyCourses from './private/MyCourses';
+import MyDegree from './private/MyDegree';
 
 const Pages = memo(() => {
 	return (
@@ -35,6 +36,15 @@ const Pages = memo(() => {
 						element={
 							<ProtectedLayout>
 								<MyCourses />
+							</ProtectedLayout>
+						}
+					></Route>
+
+					<Route
+						path="/diploma"
+						element={
+							<ProtectedLayout>
+								<MyDegree />
 							</ProtectedLayout>
 						}
 					></Route>
