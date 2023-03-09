@@ -1,12 +1,13 @@
-import { Api } from '../../services/api';
-import { IUser } from './types';
+import jwtDecode from 'jwt-decode';
+import { DecodedToken, IUser } from './types';
+import { useAuth } from './useAuth';
 
 export function setUserLocalStorage(user: IUser | null) {
-	localStorage.setItem('user', JSON.stringify(user));
+	localStorage.setItem('@JKMMT:Token', JSON.stringify(user));
 }
 
 export function getUserLocalStorage() {
-	const json = localStorage.getItem('user');
+	const json = localStorage.getItem('@JKMMT:Token');
 
 	if (!json) {
 		return null;
@@ -16,12 +17,26 @@ export function getUserLocalStorage() {
 	return user ?? null;
 }
 
-export async function LoginRequest(email: string, password: string) {
-	try {
-		const request = await Api.post('login', { email, password });
+function isTokenExpired(token: string): boolean {
+	const decodedToken = jwtDecode<DecodedToken>(token);
+	const expirationTime = decodedToken.exp;
+	const currentTime = Date.now() / 1000;
 
-		return request.data;
-	} catch (error) {
-		return null;
+	return expirationTime < currentTime;
+}
+
+export function validToken() {
+	const auth = useAuth();
+	const token = auth?.token;
+
+	if (token) {
+		const isExpired = isTokenExpired(token);
+
+		if (isExpired) {
+			auth.logout();
+			return false;
+		} else {
+			return true;
+		}
 	}
 }

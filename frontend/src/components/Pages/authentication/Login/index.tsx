@@ -5,25 +5,29 @@ import { useAuth } from '../../../../context/AuthProvider/useAuth';
 import { IPropsStyled } from '../../../../interfaces/styled';
 import BackgroundImage from '../../../shared/BackgroundImage';
 import HeaderAuthentication from '../../../shared/Header/HeaderAuthentication';
+import Input from '../../../shared/Input';
 
-const Login: React.FC<IPropsStyled> = ({ className }) => {
+const Login = ({ className }: IPropsStyled) => {
 	const auth = useAuth();
 	const navigate = useNavigate();
 
-	const [email, setEmail] = useState('eve.holt@reqres.in');
-	const [password, setPassword] = useState('');
-	const [errorMessage, setErrorMessage] = useState('');
+	const [formData, setFormData] = useState({
+		email: '',
+		password: '',
+	});
+	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-	const handleEmailInput = (event: ChangeEvent<HTMLInputElement>) => {
-		setEmail(event.target.value);
-	};
-	const handlePasswordInput = (event: ChangeEvent<HTMLInputElement>) => {
-		setPassword(event.target.value);
+	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+		setFormData({
+			...formData,
+			[event.target.name]: event.target.value,
+		});
 	};
 
-	const onFinish = async () => {
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
 		try {
-			await auth.authenticate(email, password);
+			await auth.authenticate(formData.email, formData.password);
 			navigate('/dashboard');
 		} catch (error) {
 			setErrorMessage('Email ou Senha inválidos!!');
@@ -31,26 +35,36 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 	};
 
 	return (
-		<>
-			<div className={className}>
-				<BackgroundImage />
+		<div className={className}>
+			<BackgroundImage />
 
-				<div className="form">
-					<HeaderAuthentication />
+			<div className="form">
+				<HeaderAuthentication />
 
-					<main>
-						<h1>Entrar</h1>
-						<p>Preencha seus dados para entrar</p>
+				<main>
+					<h1>Entrar</h1>
+					<p>Preencha seus dados para entrar</p>
 
-						<div className="label-float">
-							<input type="email" placeholder="Email" value={email} onChange={handleEmailInput} required />
-							<label>E-mail</label>
-						</div>
+					<form onSubmit={handleSubmit}>
+						<Input
+							label="Email"
+							name="email"
+							type="email"
+							value={formData.email}
+							onChange={handleInputChange}
+							required
+							placeholder="Email"
+						/>
 
-						<div className="label-float">
-							<input type="password" placeholder="password" value={password} onChange={handlePasswordInput} required />
-							<label>Senha</label>
-						</div>
+						<Input
+							label="Senha"
+							name="password"
+							type="password"
+							value={formData.password}
+							onChange={handleInputChange}
+							required
+							placeholder="Senha"
+						/>
 
 						<Link className="forgot-password" to="/nova-senha">
 							Esqueci minha senha
@@ -58,25 +72,25 @@ const Login: React.FC<IPropsStyled> = ({ className }) => {
 
 						{errorMessage && <div className="error"> {errorMessage} </div>}
 
-						<button className="bt bt-primary" type="button" onClick={() => onFinish()}>
+						<button className="bt bt-primary" type="submit">
 							Entrar
 						</button>
+					</form>
 
-						<p
-							style={{
-								padding: 0,
-							}}
-						>
-							Ainda não tem uma conta?
-						</p>
+					<p
+						style={{
+							padding: 0,
+						}}
+					>
+						Ainda não tem uma conta?
+					</p>
 
-						<Link className="create-account" to="/registro">
-							Criar Conta
-						</Link>
-					</main>
-				</div>
+					<Link className="create-account" to="/registro">
+						Criar Conta
+					</Link>
+				</main>
 			</div>
-		</>
+		</div>
 	);
 };
 
@@ -105,59 +119,31 @@ export default styled(Login)`
 				padding-bottom: 16px;
 			}
 
-			.label-float {
-				position: relative;
-				padding-top: 13px;
-
-				label {
-					padding: 0 8px;
-					position: absolute;
-					top: 13px;
-					left: 16px;
-					background-color: var(--bg-color-primary);
-					text-align: center;
-
-					font-family: 'Open Sans';
-					font-weight: 600;
-					line-height: 18px;
-					color: var(--color-gray-light);
+			form {
+				div:nth-child(2) {
+					margin-bottom: 0;
 				}
 
-				input {
+				.forgot-password {
+					display: flex;
+					justify-content: flex-end;
+					font-size: 14px;
+					color: var(--color-primary) !important;
+				}
+
+				.error {
+					padding-top: 16px;
+					display: flex;
+					justify-content: center;
+					color: #ff0000;
+				}
+
+				button {
+					margin: 16px 0;
 					width: 100%;
-					font-size: 16px;
-					margin: 8px 0;
-					padding: 14px 16px;
-					border: 1px solid var(--color-gray);
-					border-radius: 4px;
-					background: var(--bg-color-primary);
-					color: var(--color-gray-light);
+					height: 40px;
+					cursor: pointer;
 				}
-				input::placeholder {
-					color: var(--bg-color-primary);
-				}
-			}
-
-			.forgot-password {
-				display: flex;
-				justify-content: flex-end;
-				font-size: 14px;
-				color: var(--color-primary) !important;
-			}
-
-			.error {
-				padding-top: 16px;
-				display: flex;
-				justify-content: center;
-				color: #ff0000;
-			}
-
-			button {
-				margin-top: 16px;
-				margin-bottom: 24px;
-				width: 100%;
-				height: 40px;
-				cursor: pointer;
 			}
 
 			.create-account {

@@ -11,7 +11,7 @@ const HeaderPrivate: React.FC<IPropsStyled> = ({ className }) => {
 			<nav className="container">
 				<Logo />
 				<div>
-					{auth.email}
+					{auth.name}
 					<button className="bt bt-primary" type="button" onClick={() => auth.logout()}>
 						Sair
 					</button>
