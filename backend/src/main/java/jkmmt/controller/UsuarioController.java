@@ -3,6 +3,7 @@ package jkmmt.controller;
 import jkmmt.dto.UsuarioDto;
 import jkmmt.model.UsuarioModel;
 import jkmmt.repository.UsuarioRepository;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,21 +24,28 @@ public class UsuarioController {
     }
 
     @GetMapping("/listarTodos")
-    public ResponseEntity<List<UsuarioModel>> listarTodos(){
+    public ResponseEntity<List<UsuarioModel>> listarTodos() {
         return ResponseEntity.ok(repository.findAll());
     }
 
     @PostMapping("/salvar")
-    public ResponseEntity<UsuarioModel> salvar(@RequestBody UsuarioModel usuario){
+    @ResponseBody
+    public ResponseEntity<UsuarioModel> salvar(@RequestBody @NotNull UsuarioModel usuario) {
+        Optional<UsuarioModel> optusuarioExistente = repository.findByEmail(usuario.getEmail());
+        if (optusuarioExistente.isPresent()) {
+            // usuário já existe, retornar resposta com código de status HTTP 409 Conflict
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
+        }
+        // usuário não existe, salvar e retornar resposta com código de status HTTP 200 OK
         usuario.setPassword(encoder.encode(usuario.getPassword()));
         return ResponseEntity.ok(repository.save(usuario));
     }
 
     @GetMapping("/validarSenha")
-    public ResponseEntity<Boolean> validarSenha(@RequestParam String email, @RequestParam String password){
+    public ResponseEntity<Boolean> validarSenha(@RequestParam String email, @RequestParam String password) {
 
         Optional<UsuarioModel> optUsuario = repository.findByEmail(email);
-        if(optUsuario.isEmpty()){
+        if (optUsuario.isEmpty()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(false);
         }
 

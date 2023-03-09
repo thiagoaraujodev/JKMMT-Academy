@@ -1,10 +1,59 @@
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { ChangeEvent, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../../interfaces/styled';
+import { newUserRequest } from '../../../../services/resources/user';
 import BackgroundImage from '../../../shared/BackgroundImage';
 import HeaderAuthentication from '../../../shared/Header/HeaderAuthentication';
+import Input from '../../../shared/Input';
 
-const CreateAccount: React.FC<IPropsStyled> = ({ className }) => {
+const CreateAccount = ({ className }: IPropsStyled) => {
+	const navigate = useNavigate();
+
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		password: '',
+	});
+	const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+		setFormData({
+			...formData,
+			[event.target.name]: event.target.value,
+		});
+	};
+
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		try {
+			const response = await newUserRequest(formData.name, formData.email, formData.password);
+			if (response && response.status === 200) {
+				navigate('/login');
+			} else {
+				setErrorMessage('Ocorreu um erro desconhecido. Por favor, tente novamente mais tarde.');
+			}
+		} catch (error) {
+			if (axios.isAxiosError(error)) {
+				const response = error.response;
+				if (response && response.status === 409) {
+					setErrorMessage('O usuário já existe!');
+				} else if (error.code === 'ECONNABORTED') {
+					setErrorMessage('O servidor está demorando muito para responder. Por favor, tente novamente mais tarde.');
+				} else if (error.message.includes('Network Error')) {
+					setErrorMessage(
+						'Ocorreu um problema de conexão. Por favor, verifique sua conexão de rede e tente novamente.',
+					);
+				} else {
+					setErrorMessage('Ocorreu um erro desconhecido. Por favor, tente novamente mais tarde.');
+				}
+			} else {
+				setErrorMessage('Dados inválidos!!');
+			}
+		}
+	};
+
 	return (
 		<>
 			<div className={className}>
@@ -17,42 +66,42 @@ const CreateAccount: React.FC<IPropsStyled> = ({ className }) => {
 						<h1>Abra Sua Conta</h1>
 						<p>Informe seus dados para criar sua conta</p>
 
-						<div className="label-float">
-							<input
+						<form onSubmit={handleSubmit}>
+							<Input
+								label="Nome"
+								name="name"
 								type="text"
+								value={formData.name}
+								onChange={handleInputChange}
+								required
 								placeholder="Nome"
-								// value={name}
-								// onChange={handleNameInput}
-								required
 							/>
-							<label>Nome</label>
-						</div>
 
-						<div className="label-float">
-							<input
+							<Input
+								label="Email"
+								name="email"
 								type="email"
+								value={formData.email}
+								onChange={handleInputChange}
+								required
 								placeholder="Email"
-								// value={email}
-								// onChange={handleEmailInput}
-								required
 							/>
-							<label>E-mail</label>
-						</div>
 
-						<div className="label-float">
-							<input
+							<Input
+								label="Senha"
+								name="password"
 								type="password"
-								placeholder="password"
-								// value={password}
-								// onChange={handlePasswordInput}
+								value={formData.password}
+								onChange={handleInputChange}
 								required
+								placeholder="Senha"
 							/>
-							<label>Senha</label>
-						</div>
+							{errorMessage && <div className="error"> {errorMessage} </div>}
 
-						<button className="bt bt-primary" type="button">
-							Cadastrar
-						</button>
+							<button className="bt bt-primary" type="submit">
+								Cadastrar
+							</button>
+						</form>
 
 						<p
 							style={{
@@ -97,45 +146,25 @@ export default styled(CreateAccount)`
 				padding-bottom: 16px;
 			}
 
-			.label-float {
-				position: relative;
-				padding-top: 13px;
-
-				label {
-					padding: 0 8px;
-					position: absolute;
-					top: 13px;
-					left: 16px;
-					background-color: var(--bg-color-primary);
-					text-align: center;
-
-					font-family: 'Open Sans';
-					font-weight: 600;
-					line-height: 18px;
-					color: var(--color-gray-light);
+			form {
+				div:nth-child(3) {
+					margin-bottom: 0;
 				}
 
-				input {
+				.error {
+					padding-top: 16px;
+					display: flex;
+					justify-content: center;
+					color: #ff0000;
+				}
+
+				button {
+					margin-top: 16px;
+					margin-bottom: 24px;
 					width: 100%;
-					font-size: 16px;
-					margin: 8px 0;
-					padding: 14px 16px;
-					border: 1px solid var(--color-gray);
-					border-radius: 4px;
-					background: var(--bg-color-primary);
-					color: var(--color-gray-light);
+					height: 40px;
+					cursor: pointer;
 				}
-				input::placeholder {
-					color: var(--bg-color-primary);
-				}
-			}
-
-			button {
-				margin-top: 16px;
-				margin-bottom: 24px;
-				width: 100%;
-				height: 40px;
-				cursor: pointer;
 			}
 
 			.login {

@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import { getUser, LoginRequest } from '../../services/resources/user';
+import { getUser, loginRequest } from '../../services/resources/user';
 import { IAuthProvider, IContext, IUser } from './types';
 import { getUserLocalStorage, setUserLocalStorage } from './util';
 
@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 	}, []);
 
 	async function authenticate(email: string, password: string) {
-		const response = await LoginRequest(email, password);
+		const response = await loginRequest(email, password);
 		const payload = response;
 
 		setUser(payload);

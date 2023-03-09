@@ -2,6 +2,8 @@ package jkmmt.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -24,18 +26,18 @@ public class JWTValidarFilter extends BasicAuthenticationFilter {
     }
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request,
+    protected void doFilterInternal(@NotNull HttpServletRequest request,
                                     HttpServletResponse response,
                                     FilterChain chain) throws IOException, ServletException {
 
         String atributo = request.getHeader(HEADER_ATRIBUTO);
 
-        if (atributo == null){
+        if (atributo == null) {
             chain.doFilter(request, response);
             return;
         }
 
-        if (!atributo.startsWith(ATRIBUTO_PREFIXO)){
+        if (!atributo.startsWith(ATRIBUTO_PREFIXO)) {
             chain.doFilter(request, response);
             return;
         }
@@ -48,13 +50,13 @@ public class JWTValidarFilter extends BasicAuthenticationFilter {
 
     }
 
-    private UsernamePasswordAuthenticationToken getAuthenticationToken(String token){
+    private @Nullable UsernamePasswordAuthenticationToken getAuthenticationToken(String token) {
         String usuario = JWT.require(Algorithm.HMAC512(JWTAutenticarFilter.TOKEN_SENHA))
                 .build()
                 .verify(token)
                 .getSubject();
 
-        if (usuario == null){
+        if (usuario == null) {
             return null;
         }
 

@@ -5,6 +5,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jkmmt.data.DetalheUsuarioData;
 import jkmmt.model.UsuarioModel;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -31,7 +32,7 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
     }
 
     @Override
-    public Authentication attemptAuthentication(HttpServletRequest request,
+    public Authentication attemptAuthentication(@NotNull HttpServletRequest request,
                                                 HttpServletResponse response) throws AuthenticationException {
 
         try {
@@ -50,9 +51,9 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
 
     @Override
     protected void successfulAuthentication(HttpServletRequest request,
-                                            HttpServletResponse response,
+                                            @NotNull HttpServletResponse response,
                                             FilterChain chain,
-                                            Authentication authResult) throws IOException, ServletException {
+                                            @NotNull Authentication authResult) throws IOException, ServletException {
 
 
         DetalheUsuarioData usuarioData = (DetalheUsuarioData) authResult.getPrincipal();
@@ -63,7 +64,6 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
                 .withExpiresAt(new Date(System.currentTimeMillis() + TOKEN_EXPIRACAO))
                 .sign(Algorithm.HMAC512(TOKEN_SENHA));
 
-//        response.getWriter().write(token);
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write("{\"token\":\"" + token + "\"}");

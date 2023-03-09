@@ -22,7 +22,7 @@ public class DetalheUsuarioServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Optional<UsuarioModel> usuario = repository.findByEmail(email);
-        if (usuario.isEmpty()){
+        if (usuario.isEmpty()) {
             throw new UsernameNotFoundException("usuário [" + email + "] não encontrado!");
         }
 
