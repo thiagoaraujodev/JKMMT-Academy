@@ -26,14 +26,14 @@ function isTokenExpired(token: string): boolean {
 }
 
 export function validToken() {
-	const auth = useAuth();
-	const token = auth?.token;
+	const authContext = useAuth();
+	const token = authContext?.token;
 
 	if (token) {
 		const isExpired = isTokenExpired(token);
 
 		if (isExpired) {
-			auth.logout();
+			authContext.logout();
 			return false;
 		} else {
 			return true;

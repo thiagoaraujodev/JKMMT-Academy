@@ -8,7 +8,7 @@ import HeaderAuthentication from '../../../shared/Header/HeaderAuthentication';
 import Input from '../../../shared/Input';
 
 const Login = ({ className }: IPropsStyled) => {
-	const auth = useAuth();
+	const authContext = useAuth();
 	const navigate = useNavigate();
 
 	const [formData, setFormData] = useState({
@@ -27,7 +27,7 @@ const Login = ({ className }: IPropsStyled) => {
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		try {
-			await auth.authenticate(formData.email, formData.password);
+			await authContext.authenticate(formData.email, formData.password);
 			navigate('/dashboard');
 		} catch (error) {
 			setErrorMessage('Email ou Senha inválidos!!');
