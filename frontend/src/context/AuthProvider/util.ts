@@ -3,11 +3,11 @@ import { DecodedToken, IUser } from './types';
 import { useAuth } from './useAuth';
 
 export function setUserLocalStorage(user: IUser | null) {
-	localStorage.setItem('@JKMMT:Token', JSON.stringify(user));
+	localStorage.setItem('@JKMMT:User', JSON.stringify(user));
 }
 
 export function getUserLocalStorage() {
-	const json = localStorage.getItem('@JKMMT:Token');
+	const json = localStorage.getItem('@JKMMT:User');
 
 	if (!json) {
 		return null;

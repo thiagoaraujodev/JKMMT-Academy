@@ -6,7 +6,7 @@ import { getUserLocalStorage, setUserLocalStorage } from './util';
 export const AuthContext = createContext<IContext>({} as IContext);
 
 export const AuthProvider = ({ children }: IAuthProvider) => {
-	const [user, setUser] = useState<IUser | null>();
+	const [user, setUser] = useState<IUser | null>(null);
 
 	useEffect(() => {
 		const user = getUserLocalStorage();
@@ -15,6 +15,10 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 			setUser(user);
 		}
 	}, []);
+
+	useEffect(() => {
+		setUserLocalStorage(user);
+	}, [user]);
 
 	async function authenticate(email: string, password: string) {
 		const response = await loginRequest(email, password);
@@ -40,6 +44,6 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 	}
 
 	return (
-		<AuthContext.Provider value={{ ...user, authenticate, logout, getCurrentUser }}>{children}</AuthContext.Provider>
+		<AuthContext.Provider value={{ ...user, authenticate, getCurrentUser, logout }}>{children}</AuthContext.Provider>
 	);
 };
