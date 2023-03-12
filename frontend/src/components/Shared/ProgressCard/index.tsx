@@ -2,12 +2,11 @@ import { useState } from 'react';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../interfaces/styled';
+import ProgressBar from '../ProgressBar';
 
 interface CourseCardProps extends IPropsStyled {
 	title?: string;
 	image?: string;
-	link?: string;
-	description?: string;
 	onStartButtonClick?: () => void;
 	isVideoPlayerShown?: boolean;
 }
@@ -23,11 +22,8 @@ const ProgressCard = ({ className, ...props }: CourseCardProps) => {
 		<div className={`'course-card-progress' ${className}`}>
 			<img src={props.image} alt={props.title} className="image" />
 			<div className="course-card-content">
-				<div className="progress-status">
-					<p>Progresso</p>
-					<p>25%</p>
-				</div>
-				<progress value={progress} max="100" />
+				<ProgressBar progress={progress} />
+
 				<Link
 					className="bt bt-primary"
 					onClick={handleStartButtonClick}
@@ -35,7 +31,7 @@ const ProgressCard = ({ className, ...props }: CourseCardProps) => {
 					smooth="easeOutQuad"
 					duration={1000}
 				>
-					Começar
+					Continuar
 				</Link>
 			</div>
 		</div>
@@ -65,40 +61,6 @@ export default styled(ProgressCard)`
 		padding: 16px;
 		gap: 4px;
 
-		.progress-status {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			font-family: 'Open Sans', sans-serif;
-			font-size: 12px;
-			line-height: 16px;
-			color: var(--text-color-black-gray-light);
-		}
-
-		progress {
-			width: 100%;
-			height: 12px;
-
-			/* Altera a cor de fundo em navegadores com webkit (Chrome, Safari etc) */
-			::-webkit-progress-value {
-				background-color: var(--color-primary);
-			}
-
-			/* Altera a cor da barra em navegadores com webkit (Chrome, Safari etc) */
-			::-webkit-progress-bar {
-				background-color: var(--color-gray-lighter);
-			}
-
-			/* Altera a cor da barra em navegadores com moz (Firefox) */
-			::-moz-progress-bar {
-				background-color: var(--color-gray-lighter);
-			}
-
-			/* Altera a cor da barra em navegadores da Microsoft (IE e Edge) */
-			::-ms-fill {
-				background-color: var(--color-gray-lighter);
-			}
-		}
 		.bt {
 			margin-top: 8px;
 			cursor: pointer;

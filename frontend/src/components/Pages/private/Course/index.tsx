@@ -6,6 +6,7 @@ import { IPropsStyled } from '../../../../interfaces/styled';
 import CourseDescription from '../../../shared/CourseDescription';
 import Footer from '../../../shared/Footer';
 import HeaderPrivate from '../../../shared/Header/HeaderPrivate';
+import LessonsMenu from '../../../shared/LessonsMenu';
 import ProgressCard from '../../../shared/ProgressCard';
 import VideoPlayer from '../../../shared/VideoPlayer';
 
@@ -23,6 +24,13 @@ const Course = ({ className }: IPropsStyled) => {
 	const handleStartButtonClick = () => {
 		setIsVideoPlayerShown(true);
 	};
+
+	const content = course.content.map(section => {
+		return {
+			title: section.title,
+			lessons: section.lessons,
+		};
+	});
 
 	return (
 		<>
@@ -53,11 +61,10 @@ const Course = ({ className }: IPropsStyled) => {
 				{isVideoPlayerShown && (
 					<>
 						<div className="divider"></div>
-						<div className="container flex">
-							<VideoPlayer
-								isVideoPlayerShown={isVideoPlayerShown}
-								videoSrc="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-							/>
+						<div className="course-classes container">
+							<VideoPlayer isVideoPlayerShown={isVideoPlayerShown} videoSrc="/src/assets/video/codificacao.mp4" />
+
+							<LessonsMenu content={content} />
 						</div>
 					</>
 				)}
@@ -70,14 +77,15 @@ const Course = ({ className }: IPropsStyled) => {
 export default styled(Course)`
 	margin-top: 80px;
 
-	.container.flex {
+	.container {
 		padding-top: 80px;
 		padding-bottom: 80px;
+		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-evenly;
-		gap: 64px;
+		justify-content: space-between;
 
 		.course-content {
+			margin-bottom: 80px;
 			width: 100%;
 			height: fit-content;
 			display: flex;
@@ -137,6 +145,20 @@ export default styled(Course)`
 						content: '- ';
 					}
 				}
+			}
+		}
+	}
+
+	.course-classes {
+		.course-video-player {
+			width: 100%;
+			max-width: 990px;
+			height: calc((990px / 1.77) + 30px);
+			background-color: #000;
+
+			.video-play {
+				width: 100% !important;
+				height: 100% !important;
 			}
 		}
 	}

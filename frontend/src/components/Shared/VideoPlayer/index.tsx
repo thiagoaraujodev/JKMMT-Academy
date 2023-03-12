@@ -25,6 +25,7 @@ const VideoPlayer = ({ isVideoPlayerShown, videoSrc }: IVideoPlayerProps) => {
 
 	return (
 		<div
+			className="course-video-player"
 			style={{ display: isVideoPlayerShown ? 'block' : 'none', position: 'relative' }}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
@@ -49,8 +50,7 @@ const VideoPlayer = ({ isVideoPlayerShown, videoSrc }: IVideoPlayerProps) => {
 			</button>
 
 			<ReactPlayer
-				width="940px"
-				height="660px"
+				className="video-play"
 				ref={videoRef}
 				url={videoSrc}
 				playing={isPlaying}
@@ -63,7 +63,7 @@ const VideoPlayer = ({ isVideoPlayerShown, videoSrc }: IVideoPlayerProps) => {
 						},
 					},
 				}}
-				fullscreen={true}
+				fullscreen={'true'}
 			/>
 		</div>
 	);

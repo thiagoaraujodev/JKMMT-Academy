@@ -1,5 +1,6 @@
 [
 	{
+		"id": "1",
 		"title": "Design Gráfico com Canva",
 		"sub_title": "Marketing",
 		"image": "/src/assets/Images/cards/canva.png",
@@ -19,9 +20,36 @@
 			],
 			"para4": "Ao concluir este curso, você estará equipado com habilidades valiosas de design gráfico que podem ser aplicadas em diversas áreas, como marketing digital, mídia social, criação de conteúdo e design de materiais impressos.",
 			"para5": "O curso é dividido em 5 seções: Introdução ao Canva, Fundamentos do design gráfico, Design para marketing digital, Design para impressos e Projetos avançados."
-		}
+		},
+		"content": [
+			{
+				"title": "Introdução",
+				"lessons": [{ "name": "Aula 1", "completed": true }]
+			},
+			{
+				"title": "Desenvolvimento 1",
+				"lessons": [
+					{ "name": "Aula 1", "completed": true },
+					{ "name": "Aula 2", "completed": true },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			},
+			{
+				"title": "Desenvolvimento 2",
+				"lessons": [
+					{ "name": "Aula 1", "completed": false },
+					{ "name": "Aula 2", "completed": false },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			}
+		]
 	},
 	{
+		"id": "2",
 		"title": "Spring Boot 2",
 		"sub_title": "Back - End",
 		"image": "/src/assets/Images/cards/spring-boot-2.png",
@@ -41,9 +69,36 @@
 			"para3": "Além disso, você aprenderá como testar suas aplicações com o JUnit 5 e o Mockito, bem como como implantar suas aplicações em servidores de aplicação, como o Apache Tomcat.",
 			"para4": "O curso é adequado para desenvolvedores que desejam aprender a criar aplicações web com Spring Boot 2 e para aqueles que já têm alguma experiência com o desenvolvimento de aplicações Java e desejam aprender a usar o Spring Boot 2 para criar aplicações web e serviços RESTful de forma eficiente.",
 			"para5": "Ao concluir este curso, você estará equipado com as habilidades necessárias para desenvolver aplicações web de qualidade com Spring Boot 2, bem como para estender o framework para atender às suas necessidades específicas."
-		}
+		},
+		"content": [
+			{
+				"title": "Introdução",
+				"lessons": [{ "name": "Aula 1", "completed": true }]
+			},
+			{
+				"title": "Desenvolvimento 1",
+				"lessons": [
+					{ "name": "Aula 1", "completed": true },
+					{ "name": "Aula 2", "completed": true },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			},
+			{
+				"title": "Desenvolvimento 2",
+				"lessons": [
+					{ "name": "Aula 1", "completed": false },
+					{ "name": "Aula 2", "completed": false },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			}
+		]
 	},
 	{
+		"id": "3",
 		"title": "HTML5 na prática",
 		"sub_title": "Front - End",
 		"image": "/src/assets/Images/cards/html-5-na-pratica.png",
@@ -65,9 +120,36 @@
 			"para3": "Ao concluir este curso, você estará equipado com habilidades valiosas para desenvolvimento web com HTML5. Você será capaz de criar páginas web funcionais e atraentes, otimizadas para diferentes dispositivos e navegadores.",
 			"para4": "O curso é dividido em 6 seções: Introdução ao HTML5, Estrutura básica do HTML, Elementos HTML5, Formulários e mídias, Layouts responsivos e Animando com HTML5.",
 			"para5": "Com este curso, você estará preparado para trabalhar com HTML5 e criar páginas web de alta qualidade, tanto para projetos pessoais quanto profissionais."
-		}
+		},
+		"content": [
+			{
+				"title": "Introdução",
+				"lessons": [{ "name": "Aula 1", "completed": true }]
+			},
+			{
+				"title": "Desenvolvimento 1",
+				"lessons": [
+					{ "name": "Aula 1", "completed": true },
+					{ "name": "Aula 2", "completed": true },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			},
+			{
+				"title": "Desenvolvimento 2",
+				"lessons": [
+					{ "name": "Aula 1", "completed": false },
+					{ "name": "Aula 2", "completed": false },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			}
+		]
 	},
 	{
+		"id": "4",
 		"title": "ASP.NET Core 5 - Criando API",
 		"sub_title": "Back - End",
 		"image": "/src/assets/Images/cards/asp-net-core-5.png",
@@ -91,9 +173,36 @@
 			],
 			"para4": "Ao concluir este curso, você terá uma compreensão sólida dos conceitos fundamentais do desenvolvimento de API com ASP.NET Core 5, bem como habilidades práticas para construir, testar e implantar APIs com segurança e eficácia.",
 			"para5": "O curso é dividido em 8 seções: Introdução ao ASP.NET Core, Configuração de ambiente de desenvolvimento, Criação do projeto de API, Implementação de endpoints de API, Implementação de segurança e versionamento de API, Gerenciamento de cache, Documentação de API e Teste e depuração de API."
-		}
+		},
+		"content": [
+			{
+				"title": "Introdução",
+				"lessons": [{ "name": "Aula 1", "completed": true }]
+			},
+			{
+				"title": "Desenvolvimento 1",
+				"lessons": [
+					{ "name": "Aula 1", "completed": true },
+					{ "name": "Aula 2", "completed": true },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			},
+			{
+				"title": "Desenvolvimento 2",
+				"lessons": [
+					{ "name": "Aula 1", "completed": false },
+					{ "name": "Aula 2", "completed": false },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			}
+		]
 	},
 	{
+		"id": "5",
 		"title": "Angular.js",
 		"sub_title": "Front - End",
 		"image": "/src/assets/Images/cards/angular.png",
@@ -115,9 +224,36 @@
 			],
 			"para4": "Ao final do curso, você terá as habilidades necessárias para desenvolver aplicações web complexas utilizando o Angular.js, além de entender como funciona um framework JavaScript moderno e como ele pode ser aplicado em projetos reais.",
 			"para5": "O curso é indicado para desenvolvedores web que queiram aprender a utilizar o Angular.js para criar aplicações modernas e interativas."
-		}
+		},
+		"content": [
+			{
+				"title": "Introdução",
+				"lessons": [{ "name": "Aula 1", "completed": true }]
+			},
+			{
+				"title": "Desenvolvimento 1",
+				"lessons": [
+					{ "name": "Aula 1", "completed": true },
+					{ "name": "Aula 2", "completed": true },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			},
+			{
+				"title": "Desenvolvimento 2",
+				"lessons": [
+					{ "name": "Aula 1", "completed": false },
+					{ "name": "Aula 2", "completed": false },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			}
+		]
 	},
 	{
+		"id": "6",
 		"title": "MySQL para Iniciantes",
 		"sub_title": "Banco de Dados",
 		"image": "/src/assets/Images/cards/msql.png",
@@ -140,11 +276,38 @@
 			],
 			"para4": "Ao concluir este curso, você estará equipado com habilidades valiosas de banco de dados que podem ser aplicadas em diversas áreas, como desenvolvimento web, análise de dados, gerenciamento de projetos e muito mais.",
 			"para5": "O curso é dividido em 8 seções: Introdução ao MySQL, Criando bancos de dados e tabelas, Inserindo dados, Consultando e filtrando dados, Funções e operadores, Gerenciamento de usuários, Otimização de desempenho e Backup e restauração de dados."
-		}
+		},
+		"content": [
+			{
+				"title": "Introdução",
+				"lessons": [{ "name": "Aula 1", "completed": true }]
+			},
+			{
+				"title": "Desenvolvimento 1",
+				"lessons": [
+					{ "name": "Aula 1", "completed": true },
+					{ "name": "Aula 2", "completed": true },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			},
+			{
+				"title": "Desenvolvimento 2",
+				"lessons": [
+					{ "name": "Aula 1", "completed": false },
+					{ "name": "Aula 2", "completed": false },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			}
+		]
 	},
 	{
+		"id": "7",
 		"title": "TypeScript do Básico",
-		"sub_title": "Aprenda a usar TypeScript para desenvolver aplicativos web escaláveis",
+		"sub_title": "Front - End",
 		"image": "/src/assets/Images/cards/typescript.png",
 		"link": "/curso/typescript-do-basico",
 		"author": "Rosi Vasconcelos",
@@ -162,9 +325,36 @@
 			],
 			"para4": "Ao final do curso, você terá uma compreensão completa de como criar aplicativos web escaláveis ​​com TypeScript. Você estará equipado com as habilidades necessárias para desenvolver aplicativos web de alta qualidade usando TypeScript e poderá aplicar essas habilidades em seus próprios projetos pessoais ou profissionais.",
 			"para5": "Este curso é ideal para iniciantes que desejam aprender TypeScript do zero e que desejam expandir suas habilidades em desenvolvimento de aplicativos web. Com os conhecimentos adquiridos neste curso, você estará bem equipado para criar aplicativos web escaláveis, confiáveis e fáceis de manter em qualquer ambiente. Inscreva-se hoje e comece sua jornada para se tornar um especialista em TypeScript!"
-		}
+		},
+		"content": [
+			{
+				"title": "Introdução",
+				"lessons": [{ "name": "Aula 1", "completed": true }]
+			},
+			{
+				"title": "Desenvolvimento 1",
+				"lessons": [
+					{ "name": "Aula 1", "completed": true },
+					{ "name": "Aula 2", "completed": true },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			},
+			{
+				"title": "Desenvolvimento 2",
+				"lessons": [
+					{ "name": "Aula 1", "completed": false },
+					{ "name": "Aula 2", "completed": false },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			}
+		]
 	},
 	{
+		"id": "8",
 		"title": "Java 8 para Iniciantes",
 		"sub_title": "Back - End",
 		"image": "/src/assets/Images/cards/java-8.png",
@@ -184,6 +374,32 @@
 			"para3": "O curso é dividido em módulos que abrangem diferentes aspectos da linguagem Java e seus recursos. Você irá explorar como escrever código eficiente, limpo e de fácil manutenção.",
 			"para4": "Além disso, você também irá aprender sobre o ambiente de desenvolvimento integrado (IDE) Eclipse e como usá-lo para programar em Java.",
 			"para5": "Ao final do curso, você terá um conhecimento sólido sobre a linguagem de programação Java e estará pronto para criar seus próprios programas."
-		}
+		},
+		"content": [
+			{
+				"title": "Introdução",
+				"lessons": [{ "name": "Aula 1", "completed": true }]
+			},
+			{
+				"title": "Desenvolvimento 1",
+				"lessons": [
+					{ "name": "Aula 1", "completed": true },
+					{ "name": "Aula 2", "completed": true },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			},
+			{
+				"title": "Desenvolvimento 2",
+				"lessons": [
+					{ "name": "Aula 1", "completed": false },
+					{ "name": "Aula 2", "completed": false },
+					{ "name": "Aula 3", "completed": false },
+					{ "name": "Aula 4", "completed": false },
+					{ "name": "Aula 5", "completed": false }
+				]
+			}
+		]
 	}
 ]

@@ -144,6 +144,41 @@ body {
 }
 
 
+.progress-status {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 12px;
+			line-height: 16px;
+			color: var(--text-color-black-gray-light);
+		}
+
+		progress {
+			width: 100%;
+			height: 12px;
+
+			/* Altera a cor de fundo em navegadores com webkit (Chrome, Safari etc) */
+			::-webkit-progress-value {
+				background-color: var(--color-primary);
+			}
+
+			/* Altera a cor da barra em navegadores com webkit (Chrome, Safari etc) */
+			::-webkit-progress-bar {
+				background-color: var(--color-gray-lighter);
+			}
+
+			/* Altera a cor da barra em navegadores com moz (Firefox) */
+			::-moz-progress-bar {
+				background-color: var(--color-gray-lighter);
+			}
+
+			/* Altera a cor da barra em navegadores da Microsoft (IE e Edge) */
+			::-ms-fill {
+				background-color: var(--color-gray-lighter);
+			}
+		}
+
 
 @media (min-width: 768px) {
 	.mt-header {
