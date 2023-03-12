@@ -9,6 +9,7 @@ import CreateAccount from './authentication/CreateAccount';
 import ForgotPassword from './authentication/ForgotPassword';
 import Login from './authentication/Login';
 import Home from './Home';
+import Course from './private/Course';
 import Dashboard from './private/Dashboard';
 import MyCourses from './private/MyCourses';
 import MyDegree from './private/MyDegree';
@@ -45,6 +46,15 @@ const Pages = memo(() => {
 						element={
 							<ProtectedLayout>
 								<MyDegree />
+							</ProtectedLayout>
+						}
+					></Route>
+
+					<Route
+						path="/curso/:courseLink"
+						element={
+							<ProtectedLayout>
+								<Course />
 							</ProtectedLayout>
 						}
 					></Route>

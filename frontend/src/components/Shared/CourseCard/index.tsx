@@ -17,7 +17,7 @@ const CardCourse: React.FC<ICardCourse> = ({ className, ...props }) => {
 	return (
 		<>
 			<div className={className}>
-				<img src={props.image} alt="Canva" className="image" />
+				<img src={props.image} alt={props.title} className="image" />
 				<div className="flex">
 					<p className="title">{props.title}</p>
 					<div className="sub-title">
@@ -35,7 +35,6 @@ const CardCourse: React.FC<ICardCourse> = ({ className, ...props }) => {
 
 export default styled(CardCourse)`
 	position: relative;
-	/* margin: 8px 0; */
 	width: 100%;
 	max-width: 275px;
 	height: 100%;

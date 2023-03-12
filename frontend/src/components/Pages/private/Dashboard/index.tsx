@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import courses from '../../../../data/courses.json';
 import { IPropsStyled } from '../../../../interfaces/styled';
-import CardCourse from '../../../shared/CardCourse';
+import CourseCard from '../../../shared/CourseCard';
 import Footer from '../../../shared/Footer';
 import HeaderPrivate from '../../../shared/Header/HeaderPrivate';
 
@@ -22,7 +22,7 @@ const Dashboard: React.FC<IPropsStyled> = ({ className }) => {
 						</Link>
 					</div>
 					{courses.map((course, index) => (
-						<CardCourse
+						<CourseCard
 							key={index}
 							image={course.image}
 							title={course.title}

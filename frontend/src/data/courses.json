@@ -2,44 +2,188 @@
 	{
 		"title": "Design Gráfico com Canva",
 		"sub_title": "Marketing",
-		"image": "src/assets/Images/cards/canva.png",
-		"link": "/curso/design-grafico-com-canva"
+		"image": "/src/assets/Images/cards/canva.png",
+		"link": "/curso/design-grafico-com-canva",
+		"author": "Jorge Paulo",
+		"description": {
+			"intro": "Neste curso você aprenderá as técnicas essenciais para criar designs incríveis com o Canva, uma das ferramentas de design gráfico mais populares do mercado.",
+			"para1": "Com a ajuda de um designer gráfico experiente, você descobrirá como usar os recursos do Canva para criar gráficos impressionantes para sua marca pessoal ou para clientes.",
+			"para2": "O curso é dividido em módulos que cobrem diferentes aspectos do design gráfico, desde os fundamentos básicos até técnicas avançadas. Você aprenderá a criar layouts atraentes, a escolher as cores certas, a selecionar fontes apropriadas e muito mais.",
+			"para3": "Além disso, você também receberá dicas valiosas sobre como organizar seu trabalho e como encontrar inspiração para seus projetos.",
+			"topics": [
+				"Como criar designs atraentes com o Canva",
+				"Como escolher as cores certas para seus projetos",
+				"Como selecionar fontes apropriadas para diferentes tipos de projetos",
+				"Como criar layouts equilibrados e atraentes",
+				"Como exportar e compartilhar seus projetos com outros"
+			],
+			"para4": "Ao concluir este curso, você estará equipado com habilidades valiosas de design gráfico que podem ser aplicadas em diversas áreas, como marketing digital, mídia social, criação de conteúdo e design de materiais impressos.",
+			"para5": "O curso é dividido em 5 seções: Introdução ao Canva, Fundamentos do design gráfico, Design para marketing digital, Design para impressos e Projetos avançados."
+		}
 	},
 	{
-		"title": "Spring Boot 2 ",
+		"title": "Spring Boot 2",
 		"sub_title": "Back - End",
-		"image": "src/assets/Images/cards/spring-boot-2.png",
-		"link": "/curso/spring-boot-2"
+		"image": "/src/assets/Images/cards/spring-boot-2.png",
+		"link": "/curso/spring-boot-2",
+		"author": "Perez Silva",
+		"description": {
+			"intro": "Este curso é uma introdução ao desenvolvimento de aplicações web com Spring Boot 2, um framework Java popular para criação de aplicações web e serviços RESTful.",
+			"para1": "Durante o curso, você aprenderá como criar aplicações web usando Spring Boot 2, bem como aprenderá a implementar funcionalidades comuns, como autenticação de usuários, manipulação de formulários, criação de APIs RESTful e muito mais.",
+			"para2": "Você também descobrirá como usar o Spring Data JPA para se conectar a um banco de dados e realizar operações CRUD. Além disso, o curso inclui exemplos de como usar o Spring Security para proteger suas aplicações e implementar autenticação de usuários.",
+			"topics": [
+				"Criando uma aplicação web com Spring Boot 2",
+				"Usando o Spring Data JPA para se conectar a um banco de dados",
+				"Implementando autenticação de usuários com Spring Security",
+				"Manipulando formulários e criando APIs RESTful com Spring Boot 2",
+				"Usando o Spring Boot Actuator para monitorar e gerenciar aplicações"
+			],
+			"para3": "Além disso, você aprenderá como testar suas aplicações com o JUnit 5 e o Mockito, bem como como implantar suas aplicações em servidores de aplicação, como o Apache Tomcat.",
+			"para4": "O curso é adequado para desenvolvedores que desejam aprender a criar aplicações web com Spring Boot 2 e para aqueles que já têm alguma experiência com o desenvolvimento de aplicações Java e desejam aprender a usar o Spring Boot 2 para criar aplicações web e serviços RESTful de forma eficiente.",
+			"para5": "Ao concluir este curso, você estará equipado com as habilidades necessárias para desenvolver aplicações web de qualidade com Spring Boot 2, bem como para estender o framework para atender às suas necessidades específicas."
+		}
 	},
 	{
 		"title": "HTML5 na prática",
 		"sub_title": "Front - End",
-		"image": "src/assets/Images/cards/html-5-na-pratica.png",
-		"link": "/curso/html5-na-pratica"
+		"image": "/src/assets/Images/cards/html-5-na-pratica.png",
+		"link": "/curso/html5-na-pratica",
+		"author": "Tales Rodrigues",
+		"description": {
+			"intro": "Este curso é ideal para quem deseja aprender HTML5 na prática, começando do zero. Você aprenderá desde os conceitos básicos do HTML5 até as técnicas avançadas de desenvolvimento de páginas web.",
+			"para1": "Com a ajuda de um desenvolvedor web experiente, você descobrirá como criar páginas web atraentes e funcionais com HTML5. O curso é dividido em módulos que cobrem diferentes aspectos do desenvolvimento web, desde a estrutura básica de uma página até a criação de formulários e animações.",
+			"para2": "Você aprenderá a usar as tags HTML5 corretamente, a criar layouts responsivos, a integrar mídias como imagens e vídeos em suas páginas e muito mais. Além disso, o curso também aborda conceitos avançados como semântica e acessibilidade na web.",
+			"topics": [
+				"Como criar páginas web com HTML5 do zero",
+				"Como usar as tags HTML5 corretamente",
+				"Como criar layouts responsivos",
+				"Como integrar mídias como imagens e vídeos em suas páginas",
+				"Como criar formulários interativos",
+				"Como criar animações em HTML5",
+				"Como garantir a semântica e acessibilidade em suas páginas web"
+			],
+			"para3": "Ao concluir este curso, você estará equipado com habilidades valiosas para desenvolvimento web com HTML5. Você será capaz de criar páginas web funcionais e atraentes, otimizadas para diferentes dispositivos e navegadores.",
+			"para4": "O curso é dividido em 6 seções: Introdução ao HTML5, Estrutura básica do HTML, Elementos HTML5, Formulários e mídias, Layouts responsivos e Animando com HTML5.",
+			"para5": "Com este curso, você estará preparado para trabalhar com HTML5 e criar páginas web de alta qualidade, tanto para projetos pessoais quanto profissionais."
+		}
 	},
 	{
 		"title": "ASP.NET Core 5 - Criando API",
 		"sub_title": "Back - End",
-		"image": "src/assets/Images/cards/asp-net-core-5.png",
-		"link": "/curso/asp-net-core-5-criando-api"
+		"image": "/src/assets/Images/cards/asp-net-core-5.png",
+		"link": "/curso/asp-net-core-5-criando-api",
+		"author": "Yure Nakamoto",
+		"description": {
+			"intro": "Neste curso você aprenderá a criar uma API RESTful completa com ASP.NET Core 5, uma das tecnologias mais populares para o desenvolvimento de APIs em C#. Você descobrirá como desenvolver, testar e implantar APIs usando as melhores práticas e técnicas modernas.",
+			"para1": "Com a ajuda de um experiente desenvolvedor web, você irá construir uma API a partir do zero, utilizando os recursos mais recentes do ASP.NET Core, como middleware, roteamento, injeção de dependência, Entity Framework Core e muito mais.",
+			"para2": "O curso é dividido em módulos que cobrem diferentes aspectos do desenvolvimento de API, desde a criação do projeto até a implementação de recursos avançados, como autenticação e autorização, versionamento de API e gerenciamento de cache.",
+			"para3": "Além disso, você também aprenderá a documentar sua API de maneira eficaz usando o Swagger, uma ferramenta popular para a criação de documentação de API. Você também aprenderá a usar o Postman, uma ferramenta popular para testar e depurar APIs.",
+			"topics": [
+				"Criação de projeto de API com ASP.NET Core 5",
+				"Criação de endpoints de API usando o middleware de roteamento do ASP.NET Core",
+				"Uso de injeção de dependência para gerenciar dependências em aplicativos ASP.NET Core",
+				"Integração com Entity Framework Core para persistir dados em um banco de dados relacional",
+				"Implementação de recursos de segurança, como autenticação e autorização",
+				"Implementação de versionamento de API para garantir a compatibilidade com versões anteriores",
+				"Gerenciamento de cache para melhorar o desempenho da API",
+				"Documentação de API usando o Swagger",
+				"Teste e depuração de API usando o Postman"
+			],
+			"para4": "Ao concluir este curso, você terá uma compreensão sólida dos conceitos fundamentais do desenvolvimento de API com ASP.NET Core 5, bem como habilidades práticas para construir, testar e implantar APIs com segurança e eficácia.",
+			"para5": "O curso é dividido em 8 seções: Introdução ao ASP.NET Core, Configuração de ambiente de desenvolvimento, Criação do projeto de API, Implementação de endpoints de API, Implementação de segurança e versionamento de API, Gerenciamento de cache, Documentação de API e Teste e depuração de API."
+		}
 	},
-	{ "title": "Angular.js", "sub_title": "Front - End", "image": "src/assets/Images/cards/angular.png", "link": "" },
+	{
+		"title": "Angular.js",
+		"sub_title": "Front - End",
+		"image": "/src/assets/Images/cards/angular.png",
+		"link": "/curso/angular-js",
+		"author": "Rosi Vasconcelos",
+		"description": {
+			"intro": "Neste curso em vídeo, você aprenderá a desenvolver aplicações web dinâmicas e interativas utilizando o framework JavaScript Angular.js.",
+			"para1": "Com a ajuda de um instrutor experiente, você entenderá os conceitos básicos do Angular.js e como ele pode ser utilizado para criar aplicações modernas.",
+			"para2": "O curso é dividido em módulos que cobrem diferentes aspectos do desenvolvimento com Angular.js, desde a configuração do ambiente até a criação de componentes, diretivas e serviços.",
+			"para3": "Você aprenderá a criar aplicações reativas e dinâmicas, manipular eventos, fazer requisições HTTP e implementar rotas na sua aplicação.",
+			"topics": [
+				"Conceitos básicos do Angular.js",
+				"Configurando o ambiente de desenvolvimento",
+				"Criando componentes e diretivas",
+				"Manipulando eventos e dados",
+				"Fazendo requisições HTTP",
+				"Implementando rotas",
+				"Desenvolvendo aplicações reativas e dinâmicas"
+			],
+			"para4": "Ao final do curso, você terá as habilidades necessárias para desenvolver aplicações web complexas utilizando o Angular.js, além de entender como funciona um framework JavaScript moderno e como ele pode ser aplicado em projetos reais.",
+			"para5": "O curso é indicado para desenvolvedores web que queiram aprender a utilizar o Angular.js para criar aplicações modernas e interativas."
+		}
+	},
 	{
 		"title": "MySQL para Iniciantes",
 		"sub_title": "Banco de Dados",
-		"image": "src/assets/Images/cards/msql.png",
-		"link": "/curso/mysql-para-iniciantes"
+		"image": "/src/assets/Images/cards/msql.png",
+		"link": "/curso/mysql-para-iniciantes",
+		"author": "Tales Rodrigues",
+		"description": {
+			"intro": "Neste curso em vídeo, você aprenderá os conceitos básicos de banco de dados e como usar o MySQL, um dos sistemas de gerenciamento de banco de dados mais populares do mundo.",
+			"para1": "Com a ajuda de um especialista em banco de dados, você descobrirá como criar e gerenciar bancos de dados MySQL, tabelas, consultas e muito mais. Você também aprenderá como usar o MySQL Workbench, uma ferramenta poderosa de gerenciamento de banco de dados.",
+			"para2": "O curso é dividido em módulos que cobrem diferentes aspectos do MySQL, desde os fundamentos básicos até técnicas avançadas. Você aprenderá a criar tabelas e inserir dados, a consultar e filtrar dados, a usar funções e operadores, a criar e gerenciar usuários, e muito mais.",
+			"para3": "Além disso, você também receberá dicas valiosas sobre como otimizar o desempenho do banco de dados, como criar backups e restaurar dados, e como solucionar problemas comuns do MySQL.",
+			"topics": [
+				"Introdução aos bancos de dados e ao MySQL",
+				"Criando tabelas e inserindo dados",
+				"Consultando e filtrando dados",
+				"Usando funções e operadores",
+				"Criando e gerenciando usuários",
+				"Otimizando o desempenho do banco de dados",
+				"Criando backups e restaurando dados",
+				"Solução de problemas comuns do MySQL"
+			],
+			"para4": "Ao concluir este curso, você estará equipado com habilidades valiosas de banco de dados que podem ser aplicadas em diversas áreas, como desenvolvimento web, análise de dados, gerenciamento de projetos e muito mais.",
+			"para5": "O curso é dividido em 8 seções: Introdução ao MySQL, Criando bancos de dados e tabelas, Inserindo dados, Consultando e filtrando dados, Funções e operadores, Gerenciamento de usuários, Otimização de desempenho e Backup e restauração de dados."
+		}
 	},
 	{
 		"title": "TypeScript do Básico",
-		"sub_title": "Front - End",
-		"image": "src/assets/Images/cards/typescript.png",
-		"link": "/curso/typescript-do-basico"
+		"sub_title": "Aprenda a usar TypeScript para desenvolver aplicativos web escaláveis",
+		"image": "/src/assets/Images/cards/typescript.png",
+		"link": "/curso/typescript-do-basico",
+		"author": "Rosi Vasconcelos",
+		"description": {
+			"intro": "TypeScript é uma linguagem de programação livre e de código aberto desenvolvida pela Microsoft, que é um superset do JavaScript e adiciona recursos opcionais ao JavaScript. O TypeScript é muito útil para desenvolvedores que desejam criar aplicativos web escaláveis ​​e complexos que possam ser facilmente mantidos e expandidos ao longo do tempo. Este curso em vídeo de TypeScript do Básico é ideal para pessoas que desejam aprender os conceitos básicos de TypeScript e como usá-lo para criar aplicativos web.",
+			"para1": "Durante o curso, você aprenderá como configurar seu ambiente de desenvolvimento para o TypeScript, como criar classes e interfaces e como trabalhar com tipos de dados. Além disso, você aprenderá sobre recursos avançados do TypeScript.",
+			"para2": "Você também aprenderá como usar o TypeScript com bibliotecas e frameworks populares, como React e Node.js. Além disso, você aprenderá sobre ferramentas e técnicas úteis para desenvolver aplicativos TypeScript, como depuração, teste e gerenciamento de pacotes.",
+			"para3": "O curso é ministrado por especialistas em TypeScript e é projetado para ensinar aos alunos as melhores práticas para desenvolver aplicativos web escaláveis ​​com TypeScript. Aqui estão alguns dos tópicos que você irá aprender durante o curso:",
+			"topics": [
+				"Introdução ao TypeScript e configuração do ambiente de desenvolvimento",
+				"Classes, interfaces e tipos de dados",
+				"Módulos e namespaces",
+				"Uso do TypeScript com React e Node.js",
+				"Depuração, teste e gerenciamento de pacotes em TypeScript"
+			],
+			"para4": "Ao final do curso, você terá uma compreensão completa de como criar aplicativos web escaláveis ​​com TypeScript. Você estará equipado com as habilidades necessárias para desenvolver aplicativos web de alta qualidade usando TypeScript e poderá aplicar essas habilidades em seus próprios projetos pessoais ou profissionais.",
+			"para5": "Este curso é ideal para iniciantes que desejam aprender TypeScript do zero e que desejam expandir suas habilidades em desenvolvimento de aplicativos web. Com os conhecimentos adquiridos neste curso, você estará bem equipado para criar aplicativos web escaláveis, confiáveis e fáceis de manter em qualquer ambiente. Inscreva-se hoje e comece sua jornada para se tornar um especialista em TypeScript!"
+		}
 	},
 	{
 		"title": "Java 8 para Iniciantes",
 		"sub_title": "Back - End",
-		"image": "src/assets/Images/cards/java-8.png",
-		"link": "/curso/java-8-para-iniciantes"
+		"image": "/src/assets/Images/cards/java-8.png",
+		"link": "/curso/java-8-para-iniciantes",
+		"author": "Yure Nakamoto",
+		"description": {
+			"intro": "Este curso em vídeo é uma introdução ao Java 8 para quem está iniciando na programação ou deseja atualizar seus conhecimentos. Java é uma das linguagens de programação mais populares e poderosas no mundo da tecnologia.",
+			"para1": "Neste curso, você irá aprender os conceitos básicos da linguagem Java, incluindo variáveis, operadores, estruturas de controle de fluxo, classes, objetos, métodos e arrays.",
+			"para2": "Além disso, você irá se aprofundar nas novidades do Java 8, como a programação funcional e as expressões lambda. Com isso, você será capaz de escrever código mais limpo e eficiente.",
+			"topics": [
+				"Introdução à linguagem de programação Java",
+				"Sintaxe básica do Java",
+				"Estruturas de controle de fluxo",
+				"Classes, objetos e métodos",
+				"Programação funcional e expressões lambda"
+			],
+			"para3": "O curso é dividido em módulos que abrangem diferentes aspectos da linguagem Java e seus recursos. Você irá explorar como escrever código eficiente, limpo e de fácil manutenção.",
+			"para4": "Além disso, você também irá aprender sobre o ambiente de desenvolvimento integrado (IDE) Eclipse e como usá-lo para programar em Java.",
+			"para5": "Ao final do curso, você terá um conhecimento sólido sobre a linguagem de programação Java e estará pronto para criar seus próprios programas."
+		}
 	}
 ]

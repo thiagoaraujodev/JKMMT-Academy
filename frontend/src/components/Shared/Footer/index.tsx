@@ -2,7 +2,11 @@ import styled from 'styled-components';
 import { IPropsStyled } from '../../../interfaces/styled';
 
 const Footer: React.FC<IPropsStyled> = ({ className }) => {
-	return <footer className={className}>Copyright ® 2022</footer>;
+	return (
+		<footer id="footer" className={className}>
+			Copyright ® 2022
+		</footer>
+	);
 };
 
 export default styled(Footer)`
