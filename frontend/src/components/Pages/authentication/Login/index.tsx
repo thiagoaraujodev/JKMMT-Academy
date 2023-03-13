@@ -26,6 +26,12 @@ const Login = ({ className }: IPropsStyled) => {
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
+
+		if (!formData.email || !formData.password) {
+			setErrorMessage('Por favor, preencha todos os campos.');
+			return;
+		}
+
 		try {
 			await authContext.authenticate(formData.email, formData.password);
 			navigate('/dashboard');

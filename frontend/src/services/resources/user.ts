@@ -31,3 +31,15 @@ export const newUserRequest = async (name: string, email: string, password: stri
 		throw error;
 	}
 };
+
+export const updateUserRequest = async (id: number, name: string, email: string, password: string) => {
+	console.log(id, name, email, password);
+
+	try {
+		const request = await api.put(`/api/usuario/atualizar/${id}`, { id, name, email, password });
+
+		return request;
+	} catch (error) {
+		throw error;
+	}
+};

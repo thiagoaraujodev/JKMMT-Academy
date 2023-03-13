@@ -9,11 +9,22 @@ interface IProps {
 	value: string;
 	onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 	placeholder?: string;
+	disabled?: boolean;
 	required?: boolean;
 	className?: string;
 }
 
-const Input = ({ label, name, type = 'text', value, onChange, placeholder = '', required, className }: IProps) => {
+const Input = ({
+	label,
+	name,
+	type = 'text',
+	value,
+	onChange,
+	placeholder = '',
+	disabled,
+	required,
+	className,
+}: IProps) => {
 	const inputClassName = classNames('my-input', className);
 
 	return (
@@ -25,6 +36,7 @@ const Input = ({ label, name, type = 'text', value, onChange, placeholder = '', 
 				value={value}
 				onChange={onChange}
 				placeholder={placeholder}
+				disabled={disabled}
 				required={required}
 				className={inputClassName}
 			/>

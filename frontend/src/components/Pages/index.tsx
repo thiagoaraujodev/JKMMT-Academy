@@ -13,6 +13,7 @@ import Course from './private/Course';
 import Dashboard from './private/Dashboard';
 import MyCourses from './private/MyCourses';
 import MyDegree from './private/MyDegree';
+import UpdateAccount from './private/UpdateAccount';
 
 const Pages = memo(() => {
 	return (
@@ -32,6 +33,16 @@ const Pages = memo(() => {
 							</ProtectedLayout>
 						}
 					></Route>
+
+					<Route
+						path="/cadastro"
+						element={
+							<ProtectedLayout>
+								<UpdateAccount />
+							</ProtectedLayout>
+						}
+					></Route>
+
 					<Route
 						path="/meus-cursos"
 						element={

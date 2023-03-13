@@ -27,6 +27,12 @@ const CreateAccount = ({ className }: IPropsStyled) => {
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
+
+		if (!formData.name || !formData.email || !formData.password) {
+			setErrorMessage('Por favor, preencha todos os campos.');
+			return;
+		}
+
 		try {
 			const response = await newUserRequest(formData.name, formData.email, formData.password);
 			if (response && response.status === 200) {

@@ -41,6 +41,24 @@ public class UsuarioController {
         return ResponseEntity.ok(repository.save(usuario));
     }
 
+    @PutMapping("/atualizar/{id}")
+    @ResponseBody
+    public ResponseEntity<UsuarioModel> atualizar(@PathVariable Integer id, @RequestBody UsuarioModel usuario) {
+        Optional<UsuarioModel> optusuarioExistente = repository.findById(id);
+        if (optusuarioExistente.isPresent()) {
+            UsuarioModel usuarioExistente = optusuarioExistente.get();
+            usuarioExistente.setName(usuario.getName());
+            usuarioExistente.setEmail(usuario.getEmail());
+            usuarioExistente.setPassword(encoder.encode(usuario.getPassword()));
+
+            return ResponseEntity.ok(repository.save(usuarioExistente));
+        } else {
+            // usuário não encontrado, retornar resposta com código de status HTTP 404 Not Found
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
     @GetMapping("/validarSenha")
     public ResponseEntity<Boolean> validarSenha(@RequestParam String email, @RequestParam String password) {
 
