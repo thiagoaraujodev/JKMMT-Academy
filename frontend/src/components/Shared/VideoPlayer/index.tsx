@@ -10,6 +10,8 @@ const VideoPlayer = ({ isVideoPlayerShown, videoSrc }: IVideoPlayerProps) => {
 	const videoRef = useRef<ReactPlayer>(null);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [showControls, setShowControls] = useState(false);
+	const [currentTime, setCurrentTime] = useState(0);
+	const [duration, setDuration] = useState(0);
 
 	const handlePlayPause = () => {
 		setIsPlaying(!isPlaying);
@@ -21,6 +23,20 @@ const VideoPlayer = ({ isVideoPlayerShown, videoSrc }: IVideoPlayerProps) => {
 
 	const handleMouseLeave = () => {
 		setShowControls(false);
+	};
+
+	const handleProgress = (progress: any) => {
+		setCurrentTime(progress.playedSeconds);
+	};
+
+	const handleDuration = (duration: number) => {
+		setDuration(duration);
+	};
+
+	const formatTime = (seconds: number) => {
+		const minutes = Math.floor(seconds / 60);
+		const remainingSeconds = Math.floor(seconds % 60);
+		return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 	};
 
 	return (
@@ -56,6 +72,8 @@ const VideoPlayer = ({ isVideoPlayerShown, videoSrc }: IVideoPlayerProps) => {
 				playing={isPlaying}
 				onPlay={() => setIsPlaying(true)}
 				onPause={() => setIsPlaying(false)}
+				onProgress={handleProgress}
+				onDuration={handleDuration}
 				config={{
 					youtube: {
 						playerVars: {
@@ -65,6 +83,7 @@ const VideoPlayer = ({ isVideoPlayerShown, videoSrc }: IVideoPlayerProps) => {
 				}}
 				fullscreen={'true'}
 			/>
+			<p>{formatTime(currentTime) + ' / ' + formatTime(duration)}</p>
 		</div>
 	);
 };

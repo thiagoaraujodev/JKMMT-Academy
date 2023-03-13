@@ -62,7 +62,7 @@ const Course = ({ className }: IPropsStyled) => {
 					<>
 						<div className="divider"></div>
 						<div className="course-classes container">
-							<VideoPlayer isVideoPlayerShown={isVideoPlayerShown} videoSrc="/src/assets/video/codificacao.mp4" />
+							<VideoPlayer isVideoPlayerShown={isVideoPlayerShown} videoSrc="/src/assets/video/animacao.mp4" />
 
 							<LessonsMenu content={content} />
 						</div>
@@ -166,8 +166,15 @@ export default styled(Course)`
 			margin-right: 16px;
 			width: 100%;
 			max-width: 990px;
-			height: calc((990px / 1.77) + 30px);
+			height: calc((966px / 1.8) + 30px);
 			background-color: #000;
+
+			p {
+				width: 100%;
+				color: #fff;
+				background: #000;
+				text-align: center;
+			}
 
 			.video-play {
 				width: 100% !important;

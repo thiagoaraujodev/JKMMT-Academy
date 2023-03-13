@@ -37,7 +37,7 @@ const LessonsMenu: React.FC<ILessonsMenuProps> = ({ className, content }) => {
 		<div className={`lessons-menu ${className}`}>
 			<div>
 				{contentState.map((section, index) => (
-					<div key={index}>
+					<div className={`d${index.toString()}`} key={index}>
 						<h3 onClick={() => handleClick(index)}>{section.title}</h3>
 						{activeSections[index] && (
 							<ul>
@@ -81,6 +81,10 @@ export default styled(LessonsMenu)`
 		line-height: 24px;
 		color: #1f1e5a;
 		background-color: #b2bcc0;
+	}
+
+	.d0 h3 {
+		border-radius: 10px 10px 0 0;
 	}
 
 	ul {

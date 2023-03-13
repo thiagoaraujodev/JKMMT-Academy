@@ -11,6 +11,7 @@ import Login from './authentication/Login';
 import Home from './Home';
 import Course from './private/Course';
 import Dashboard from './private/Dashboard';
+import Historic from './private/Historic';
 import MyCourses from './private/MyCourses';
 import MyDegree from './private/MyDegree';
 import UpdateAccount from './private/UpdateAccount';
@@ -57,6 +58,15 @@ const Pages = memo(() => {
 						element={
 							<ProtectedLayout>
 								<MyDegree />
+							</ProtectedLayout>
+						}
+					></Route>
+
+					<Route
+						path="/historico"
+						element={
+							<ProtectedLayout>
+								<Historic />
 							</ProtectedLayout>
 						}
 					></Route>
