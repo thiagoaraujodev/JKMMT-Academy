@@ -120,6 +120,11 @@ export default styled(Course)`
 			display: flex;
 			justify-content: space-between;
 
+			@media (max-width: 999px) {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
 			.course-card-description {
 				width: 100%;
 				max-width: 890px;
@@ -145,12 +150,20 @@ export default styled(Course)`
 						content: '- ';
 					}
 				}
+
+				@media (max-width: 999px) {
+					padding-right: 0;
+				}
 			}
 		}
 	}
 
 	.course-classes {
+		display: flex;
+		flex-wrap: nowrap;
+
 		.course-video-player {
+			margin-right: 16px;
 			width: 100%;
 			max-width: 990px;
 			height: calc((990px / 1.77) + 30px);
@@ -159,6 +172,19 @@ export default styled(Course)`
 			.video-play {
 				width: 100% !important;
 				height: 100% !important;
+			}
+		}
+
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+			flex-direction: column-reverse;
+
+			.course-video-player {
+				margin-right: 0;
+			}
+
+			.lessons-menu {
+				max-width: 100%;
 			}
 		}
 	}

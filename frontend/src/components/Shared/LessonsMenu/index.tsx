@@ -34,7 +34,7 @@ const LessonsMenu: React.FC<ILessonsMenuProps> = ({ className, content }) => {
 	};
 
 	return (
-		<div className={`"lessons-menu" ${className}`}>
+		<div className={`lessons-menu ${className}`}>
 			<div>
 				{contentState.map((section, index) => (
 					<div key={index}>
