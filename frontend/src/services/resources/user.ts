@@ -7,7 +7,7 @@ export interface IUserDTO {
 	password?: string;
 }
 
-export const getUser = async (email: string) => {
+export const getUserByEmail = async (email: string) => {
 	const result = await api.get<IUserDTO>(`/api/usuario/email/${email}`);
 	return result;
 };
@@ -42,4 +42,9 @@ export const updateUserRequest = async (id: number, name: string, email: string,
 	} catch (error) {
 		throw error;
 	}
+};
+
+export const getUserByEmailToValidateEmail = async (email: string) => {
+	const result = await api.get<boolean>(`/api/usuario/validarEmail?email=${email}`);
+	return result.data;
 };

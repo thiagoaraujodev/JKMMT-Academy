@@ -1,10 +1,47 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { IPropsStyled } from '../../../../interfaces/styled';
+import { getUserByEmailToValidateEmail } from '../../../../services/resources/user';
+import { generatePasswordResetToken } from '../../../../services/util';
 import BackgroundImage from '../../../shared/BackgroundImage';
 import HeaderAuthentication from '../../../shared/Header/HeaderAuthentication';
+import Input from '../../../shared/Input';
 
-const NewPassword: React.FC<IPropsStyled> = ({ className }) => {
+interface ForgotPasswordFormProps extends IPropsStyled {
+	onSubmit: (email: string) => void;
+}
+
+const ForgotPassword: React.FC<ForgotPasswordFormProps> = ({ className, onSubmit }) => {
+	const [email, setEmail] = useState('');
+	const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		if (!email) {
+			setErrorMessage('Por favor, preencha um E-mail válido.');
+			return;
+		}
+
+		try {
+			const isUser = await getUserByEmailToValidateEmail(email);
+			if (isUser) {
+				const token = generatePasswordResetToken(email);
+				//envia o token por email
+				//mostra a outra tela
+				//confirma o token enviado
+				//e aparece os campos de alterar a senha
+			}
+		} catch (error) {
+			setErrorMessage('Email inválido');
+		}
+	};
+
+	const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setEmail(e.target.value);
+	};
+
 	return (
 		<>
 			<div className={className}>
@@ -17,24 +54,28 @@ const NewPassword: React.FC<IPropsStyled> = ({ className }) => {
 						<h1>Esqueci minha senha</h1>
 						<p>Insira seu e-mail cadastrado para recuperar sua senha</p>
 
-						<div className="label-float">
-							<input
+						<form onSubmit={handleSubmit}>
+							<Input
+								label="Email"
+								name="email"
 								type="email"
-								placeholder="Email"
-								// value={email}
-								// onChange={handleEmailInput}
+								value={email}
+								onChange={handleEmailChange}
 								required
+								placeholder="Email"
 							/>
-							<label>E-mail</label>
-						</div>
 
-						<button className="bt bt-primary" type="button">
-							Confirmar E-mail
-						</button>
+							{errorMessage && <div className="error"> {errorMessage} </div>}
+
+							<button className="bt bt-primary" type="submit">
+								Confirmar E-mail
+							</button>
+						</form>
 
 						<p
 							style={{
 								padding: 0,
+								marginTop: '16px',
 							}}
 						>
 							Já possui uma conta?
@@ -50,7 +91,7 @@ const NewPassword: React.FC<IPropsStyled> = ({ className }) => {
 	);
 };
 
-export default styled(NewPassword)`
+export default styled(ForgotPassword)`
 	width: 100%;
 	display: flex;
 
@@ -73,6 +114,19 @@ export default styled(NewPassword)`
 				color: var(--color-gray-light);
 				line-height: 175%;
 				padding-bottom: 16px;
+			}
+
+			form {
+				.error {
+					padding-bottom: 16px;
+					display: flex;
+					justify-content: center;
+					color: #ff0000;
+				}
+			}
+
+			.bt {
+				width: 100%;
 			}
 
 			.label-float {
@@ -106,24 +160,6 @@ export default styled(NewPassword)`
 				input::placeholder {
 					color: var(--bg-color-primary);
 				}
-			}
-
-			.forgot-password {
-				color: var(--color-primary) !important;
-				float: right;
-				padding: 8px 0;
-			}
-
-			button {
-				margin-top: 16px;
-				margin-bottom: 24px;
-				width: 100%;
-				height: 40px;
-				cursor: pointer;
-			}
-
-			.login {
-				color: var(--color-primary) !important;
 			}
 		}
 	}

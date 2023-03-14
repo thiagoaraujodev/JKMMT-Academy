@@ -40,6 +40,7 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/api/usuario/salvar").permitAll()
+                .antMatchers("/api/usuario/validarEmail").permitAll()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .anyRequest().authenticated()
                 .and()

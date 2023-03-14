@@ -87,4 +87,15 @@ public class UsuarioController {
         UsuarioDto usuarioDto = new UsuarioDto(usuario.getId(), usuario.getName(), usuario.getEmail());
         return ResponseEntity.ok(usuarioDto);
     }
+
+    @GetMapping("/validarEmail")
+    public ResponseEntity<Boolean> validarEmail(@RequestParam String email) {
+
+        Optional<UsuarioModel> optUsuario = repository.findByEmail(email);
+        if (optUsuario.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(false);
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(true);
+    }
 }

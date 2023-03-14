@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import { getUser, loginRequest } from '../../services/resources/user';
+import { getUserByEmail, loginRequest } from '../../services/resources/user';
 import { IAuthProvider, IContext, IUser } from './types';
 import { getUserLocalStorage, setUserLocalStorage } from './util';
 
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 	}
 
 	async function getCurrentUser(email: string) {
-		const response = await getUser(email);
+		const response = await getUserByEmail(email);
 		setUser(prevState => {
 			return { ...prevState, ...response.data };
 		});
