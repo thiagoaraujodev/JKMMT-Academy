@@ -12,8 +12,8 @@ const Login = ({ className }: IPropsStyled) => {
 	const navigate = useNavigate();
 
 	const [formData, setFormData] = useState({
-		email: 'teste@teste.com',
-		password: '1234',
+		email: '',
+		password: '',
 	});
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 

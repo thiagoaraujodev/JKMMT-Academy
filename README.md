@@ -16,9 +16,9 @@ O **JKMMT Academy** é uma aplicação desenvolvida para a **2ª entrega do Proj
 
 🧑💻  [Kleiton Tavares Melo](https://github.com/KleitonTavares)
 
-👧💻  [Mariah Guedes Hermínio de Lima](https://github.com/)
+👧💻  [Mariah Guedes Hermínio de Lima](https://github.com/mariahgll)
 
-👧💻  [Milena Da Silva Martins Machado](https://github.com/)
+👧💻  [Milena Da Silva Martins Machado]()
 
 🧑💻  [Thiago Barbosa de Araujo](https://github.com/thiagoaraujodev)
 
@@ -69,21 +69,21 @@ Você também pode visualizar o modelo desta aplicação no figma. [Clique aqui]
 
 ## ⚙️ Como inicializar a aplicação
 
-Você pode seguir estes passos para rodar o Frontend da aplicação utilizando o [VS Code](https://code.visualstudio.com/).
+Você pode seguir os passos abaixo para rodar o Frontend e o Backend da aplicação.
 
-Para inicializar é muito simples:
-1. Faça um clone do repositorio como no exemplo.
-2. Em seguida abra sua IDE de preferência.
+1. Abra sua IDE de preferência.
+2. Faça um clone do repositorio como no exemplo.
 3. Acesse a pasta do projeto.
 4. Instale as dependências.
 5. Execute a aplicação.
 
 ```ps
-Exemplo:
-
 # Clone o repositorio utilizando o git
 $ git clone https://github.com/thiagoaraujodev/JKMMT-Academy.git
 
+Exemplo: Frontend
+
+# Abra sua IDE ou prompt de comando de preferência.
 # Acesse a pasta do projeto
 $ cd JKMMT-Academy/frontend
 
@@ -92,13 +92,29 @@ $ npm install
 
 # Execute o comando para rodar a aplicação
 $ npm run dev
+
+*********************************************************
+
+Exemplo: Backend
+
+# Abra sua IDE "utilizamos o Intellij".
+# Acesse a pasta do projeto
+# JKMMT-Academy/backend
+
+# Execute o comando para instalar as dependências
+$ mvn clean install
+
+# Execute o comando para rodar a aplicação
+$ mvn spring-boot:run
 ```
+
 
 Neste projeto foi utilizado:
 
 - [Vite](https://vitejs.dev/)
 - [Lucide Icons](https://lucide.dev/)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Intellij](https://www.jetbrains.com/pt-br/idea/download/#section=windows)
 
 
 ### 📝 License 
